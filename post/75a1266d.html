@@ -1,0 +1,1467 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>Hexo 页面配置 | 伊森笔记</title><meta name="keywords" content="Hexo"><meta name="author" content="Ethan"><meta name="copyright" content="Ethan"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="Hexo 页面配置"><meta name="application-name" content="Hexo 页面配置"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="Hexo 页面配置"><meta property="og:url" content="https://caoyixiong.com/post/75a1266d.html"><meta property="og:site_name" content="伊森笔记"><meta property="og:description" content="Front-matter 的基本认识Front-matter 是 markdown 文件最上方以 --- 分隔的区域，用于指定个别档案的变数。其中又分为两种 markdown 里：Page Front-matter 用于页面配置、Post Front-matter 用于文章页配置。 Page Fro"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg"><meta property="article:author" content="Ethan"><meta property="article:tag"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg"><meta name="description" content="Front-matter 的基本认识Front-matter 是 markdown 文件最上方以 --- 分隔的区域，用于指定个别档案的变数。其中又分为两种 markdown 里：Page Front-matter 用于页面配置、Post Front-matter 用于文章页配置。 Page Fro"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="https://caoyixiong.com/post/75a1266d"><link rel="preconnect" href="//cdn.cbd.int"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: {"enable":true,"img":"https://upload-bbs.miyoushe.com/upload/2023/09/03/125766904/ee23df8517f3c3e3efc4145658269c06_5714860933110284659.png"},
+  postHeadAiDescription: undefined,
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: undefined,
+  greetingBox: {"enable":true,"default":"晚上好👋","list":[{"greeting":"晚安😴","startTime":0,"endTime":5},{"greeting":"早上好鸭👋, 祝你一天好心情！","startTime":6,"endTime":9},{"greeting":"上午好👋, 状态很好，鼓励一下～","startTime":10,"endTime":10},{"greeting":"11点多啦, 在坚持一下就吃饭啦～","startTime":11,"endTime":11},{"greeting":"午安👋, 宝贝","startTime":12,"endTime":14},{"greeting":"🌈充实的一天辛苦啦！","startTime":14,"endTime":18},{"greeting":"19点喽, 奖励一顿丰盛的大餐吧🍔。","startTime":19,"endTime":19},{"greeting":"晚上好👋, 在属于自己的时间好好放松😌~","startTime":20,"endTime":24}]},
+  twikooEnvId: 'https://twikoo-8sxa.vercel.app',
+  commentBarrageConfig:undefined,
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: {"apiurl":"https://friends.anheyu.com/"},
+  navMusic: true,
+  mainTone: undefined,
+  authorStatus: {"skills":["🤖️ 数码科技爱好者","🔍 分享与热心帮助","🏠 智能家居小能手","🔨 设计开发一条龙","🤝 专修交互与设计","🏃 脚踏实地行动派","🧱 团队小组发动机","💢 壮汉人狠话不多"]},
+  algolia: {"appId":"3NQ1I8Z7GZ","apiKey":"df5bcd27157ba7efa007752258f185fd","indexName":"whisper","hits":{"per_page":6},"languages":{"input_placeholder":"输入关键词后按下回车查找","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":true,"limitCount":50,"languages":{"author":"作者: Ethan","link":"链接: ","source":"来源: 伊森笔记","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: {"enable":true,"delay":100,"shiftDelay":200},
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: '伊森笔记',
+  title: 'Hexo 页面配置',
+  postAI: '',
+  pageFillDescription: 'Front-matter 的基本认识, Page Front-matter, Post Front-matter, 分类页配置（推荐）, 标签页配置（推荐）, 友情链接配置（推荐）, 与数百博主共同进步（样式存在异常）, 朋友圈页面配置（推荐）, 留言板页面配置（推荐）, 音乐馆页配置（推荐）, 追番页面配置（推荐）, 相册页面配置（推荐）, 关于页面配置（推荐）, 首页即刻说说页面配置（推荐）, 我的装备页面配置（推荐）, 404页面配置的基本认识是文件最上方以分隔的区域用于指定个别档案的变数其中又分为两种里用于页面配置用于文章页配置写法解释必需页面标题必需页面创建日期必需标签分类关于音乐馆友情链接相册相册详情朋友圈即刻页面需要配置可选页面更新日期可选页面描述可选页面关键字可选显示页面评论模块默认可选页面顶部图片可选显示当设置的时才需要配置默认可选显示当设置的时才需要配置默认可选显示侧边栏默认可选在需要的页面加载的和请参考文章下面的音乐配置可选配置代码框是否展开默认为设置中的配置可选部分页面的顶部模块背景图片写法解释必需文章标题必需文章创建日期可选文章更新日期可选文章标签可选文章分类可选文章关键字可选文章描述可选文章顶部图片可选文章缩略图如果没有设置文章页顶部将显示缩略图可设为图片地址留空可选显示文章评论模块默认可选显示文章默认为设置中的配置可选显示默认为设置中的配置可选显示简洁模式可选显示文章版权模块默认为设置中的配置可选文章版权模块的文章作者可选文章版权模块的文章作者链接可选文章版权模块的文章链接链接可选文章版权模块的版权声明文字可选显示当设置的时才需要配置默认可选显示当设置的时才需要配置默认可选在需要的页面加载的和请参考文章下面的音乐配置可选配置代码框是否展开默认为设置中的配置可选显示侧边栏默认可选首页轮播图配置索引数字越小越靠前可选首页右侧卡片组配置数字越小越靠前可选文章摘要可选文章主色必须是进制颜色且有位不可缩减例如不可写成首页轮播图配置数字越小越靠前首页卡片配置数字越小越靠前中可配置部分页面的顶部背景图片分类页配置推荐修改文件添加分类标签页配置推荐修改文件添加标签参数解释必须页面类型必须为可选是否显示评论可选是否显示顶部图可选排序方式可选排序次序友情链接配置推荐修改文件添加新建文件没有文件夹的话也请自己新建以下是默认友链格式示例框架快速简单且强大的网站框架主题生活明朗万物可爱推荐博客安知鱼生活明朗万物可爱技术小伙伴那些人那些事安知鱼生活明朗万物可爱参数解释必填友链分类名可选友链分类描述必填或者或者可选解决共同进步板块头像质量问题配置后共同进步板块的头像会添加该后缀请确保你的图片加上的配置后依然可以访问例如必须友链列表必须友链名称必须友链链接必须友链头像必须友链描述可选为或时友链的站点图片可选快捷选项等于荐可选左上角的为当前友链打上标签例如推荐可选的十六进制背景颜色例如提供了两个快捷颜色选项分别是和主题配置文件中开启中友链和友人帐的注释注意缩进与数百博主共同进步样式存在异常在主题配置文件中中配置友情链接顶部相关配置与数百名博主无限进步添加博主友链的评论自定义格式昵称请勿包含博客等字样网站地址要求博客地址请勿提交个人主页头像图片请提供尽可能清晰的图片我会上传到我自己的图床描述站点截图可选建议超过以上的友链数开启友链数目不够会导致头像无法铺满朋友圈页面配置推荐修改文件添加朋友圈主题配置文件中开启中友链和朋友圈的注释导航栏朋友圈注意缩进主题配置文件中开启自行设置朋友圈后端地址和顶部模块背景注意缩进朋友圈配置朋友圈后端地址参数备选值类型解释必须是否启用必须朋友圈前端构建后的必须朋友圈后端可选朋友圈顶部背景图以下是本站配置朋友圈后端地址其中参数可以将下载下来后将其中的替换为您的后端然后上传至您的存储端以的形式使用第二种办法也可以自行下载项目后修改代码中的变量路径为你自己的然后执行构建后将文件夹中的上传至您的存储端使用原项目地址注意朋友圈后端爬取需使用否则无法爬取到您的友链数据留言板页面配置推荐在站点配置文件中添加以下内容配置更多配置请查看信笺样式留言板控制开关信笺头部图片信笺底部图片信封前半部分信封后半部分信笺正文多行文本写法如下有什么想问的有什么想说的有什么想吐槽的哪怕是有什么想吃的都可以告诉我哦自动书记人偶竭诚为您服务仅支持单行文本信封划出的高度可选的路径名称默认为生成的页面为可选页面的配置留言板音乐馆页配置推荐修改文件添加音乐馆新建此为切换歌单按钮的歌单数据青花瓷周杰伦青花瓷青花瓷青花瓷青花瓷稻香周杰伦周杰伦稻香稻香周杰伦稻香稻香晴天周杰伦晴天晴天晴天晴天七里香周杰伦七里香七里香七里香七里香花海周杰伦花海花海花海花海反方向的钟周杰伦反方向的钟反方向的钟反方向的钟反方向的钟兰亭序周杰伦周杰伦兰亭序兰亭序周杰伦兰亭序兰亭序说好的辛福呢周杰伦说好的辛福呢说好的辛福呢说好的辛福呢说好的幸福呢等你下课杨瑞代周杰伦周杰伦等你下课等你下课周杰伦等你下课等你下课我落泪情绪零碎周杰伦我落泪情绪零碎我落泪情绪零碎我落泪情绪零碎我落泪情绪零碎听妈妈的话周杰伦听妈妈的话听妈妈的话听妈妈的话听妈妈的话明明就周杰伦明明就明明就明明就明明就我是如此相信周杰伦我是如此相信我是如此相信我是如此相信我是如此相信发如雪周杰伦发如雪发如雪发如雪发如雪以父之名周杰伦以父之名以父之名以父之名以父之名园游会周杰伦园游会园游会园游会园游会本草纲目周杰伦本草纲目本草纲目本草纲目本草纲目龙卷风周杰伦龙卷风龙卷风龙卷风龙卷风配置文件中添加以下配置注意不是主题配置文件主题配置文件中开启中我的和音乐馆的注释注意缩进如何修改默认歌单将中音乐馆的路径修改为以下格式即可支持和参数与的填写请参考追番页面配置推荐在配置文件中加入以下配置注意不是主题配置文件更多配置请参考追番插件追番设置追番列表生命不息追番不止代理代理端口相册页面配置推荐修改文件添加相册集主题配置文件中开启中我的和相册集的注释注意缩进新建文件没有文件夹的话也请自己新建世界各地夕阳与风景因为到不了世界各地所以请网友们发来了各地的夕阳与风景返回湘潭的一角湖南湘潭再吃一口就减肥洛阳暴雨后的天空河南洛阳紫菜卷我的日常这里存放的是有关我自己的一些沙雕生活与有趣的事情返回老妹的画参数备选值类型解释必须页面类必须当前相册路径必须当前相册页面样式类型必须当前相册描述必须当前相册图片可选仅当为时有效当前相册可选仅当为时有效当前相册一次懒加载的数量可选仅当为时有效当前相册是否开启懒加载默认懒加载为滚动懒加载为时懒加载不可关闭可选仅当为且开启时有效当前相册懒加载的方式默认为滚动懒加载开启本选项后为按钮点击懒加载必须当前相册内图片列表可选仅当为时有效可以加载远程的数据必须当前图片创建时间必须当前图片描述内容必须当前图片集可以多张可选当前图片的创建人未填写则不显示必须当前图片地址注意示例数据中的图片不保证可用性由于相册页面需要很多的所以在写数据的时候自行写入路径示例数据中有两个所以需要再创建两个页面注意新建的页面必须与一致文件和为相册集详情页在详情页加上日常生活世界各地风景远程加载示例数据暂不知道是干啥的这是关于页面配置推荐修改文件添加关于主题配置文件中开启中关于和关于本人的注释注意缩进新建输入以下内容关于页生活明朗万物可爱数码科技爱好者分享与热心帮助智能家居小能手设计开发一条龙专修交互与设计脚踏实地行动派团队小组发动机壮汉人狠话不多陈志伟是一名前端工程师学生独立开发者博主追求源于热爱而去感受学习生活程序体验技能开启创造力生涯无限进步软件工程专业软件工程专业软件工程专业文章隧道我现在住在中国长沙市生于湖南信息学院软件工程现在职业大三学生执政官座右铭生活明朗万物可爱特长脑回路新奇的酸菜鱼二次元指数爱好游戏原神爱好番剧追番约定的梦幻岛咒术回战紫罗兰永恒花园鬼灭之刃的奇妙冒险黄金之风关注偏好数码科技手机电脑软硬件音乐偏好许嵩民谣华语流行海阔蓝张时貳刀中日月长鹿啵包疾速伴舟先生大霖子贝壳贝壳名字就是要短像这样贝壳贝壳托马斯哇是猫猫欸贝壳参数备选值类型解释关于页必须页面类必须副标题必须头像链接必须作者名称必须描述必须站点关于提示相关配置必须站点关于提示性文字必须站点关于标题文字必须站点关于标题文字必须站点关于标题滚动文字必须文字必须技能相关配置必须技能提示文字必须技能标题必须生涯相关配置必须生涯提示性文字必须生涯标题可选生涯可选生涯描述可选生涯圆圈颜色必须生涯底部图片必须统计数据相关配置必须统计数据按钮前往链接必须统计数据按钮文字必须地图相关配置必须地图标题必须地图大标题必须地图亮色模式背景必须地图暗色模式背景必须作者相关信息配置必须作者相关提示文字必须作者生日年份必须作者相关提示文字必须作者相关内容必须作者相关提示文字必须作者相关内容必须作者性格相关配置必须作者性格名称必须作者性格类型必须作者自拍图片必须作者性格表述图片必须点击性格跳转到链接必须座右铭相关配置必须座右铭相关提示文字必须座右铭相关顶部文字必须座右铭相关底部文字必须特长相关配置必须特长相关提示文字必须特长相关顶部文字必须特长相关底部文字必须爱好游戏相关配置必须爱好游戏提示文字必须爱好游戏标题必须爱好游戏必须爱好游戏背景必须追番相关配置需要条数据必须追番相关提示文字必须追番相关标题必须追番相关列表必须追番名称必须追番链接必须追番的必须关注偏好相关配置必须关注偏好配置提示文字必须关注偏好配置标题必须关注偏好配置背景必须关注偏好配置底部文字必须音乐偏好相关配置必须音乐偏好提示性文字必须音乐偏好标题必须音乐偏好背景必须音乐偏好按钮链接可选打赏相关配置如果不配置将没有打赏模块必须打赏名称必须打赏金额必须打赏时间元可选打赏后缀默认元首页即刻说说页面配置推荐修改文件添加即刻短文新建输入以下内容具体字段不做解释可以依葫芦画瓢即刻短文咸鱼的日常生活随时随地分享生活关于我安知鱼主题指南支持了快捷键可以直接按下组合键以查看快捷键选项长沙安知鱼音乐支持了参数设置自定义歌单关于页的打赏仿了站的充电功能使用绘图一些动画参数移动应该不会被站警告吧另外文章也支持了顶部随机站同款春秋冬中不能直接修改的一个重要原因是在性能优化时的会进行浅层比较会认为是用一个对象且不能进入队列中批量更新好耶马上就可以放假回家了好想家里的好吃的才不是想捏妹妹的脸了全局音乐的动画也处理好了把页脚首页顶部全都魔改到本地了方便后续魔改音乐也改成胶囊的样式了其实还是想让胶囊可拖拽不可点击改变歌词位置的但是弄了半天都没弄好就放弃了朋友圈船新版本终于写完了耶终于把相册集搞定了耶瀑布流在滑动滚动条一个视口范围上下的情况执行一次到底部停止监听让性能高了好多再也不会布局混乱了搜索支持缩略图显示啦默认获取文章内容的第一张图片安知鱼遇见彩虹吃定彩虹真多丫妹妹强制要求我买走了她的两幅画歌曲推荐做了一个噩梦梦到从楼顶坠下去了是真的好看主题版本以上支持其中对于进行的额外的支持视频为的将显示为视频并且可以在链接后面拼接控制不自动播放主题配置文件中开启中关于和闲言碎语的注释导航栏闲言碎语注意缩进我的装备页面配置推荐修改文件添加我的装备新建文件没有文件夹的话也请自己新建以下是默认格式示例好物实物装备推荐跟安知鱼一起享受科技带来的乐趣生产力提升自己生产效率的硬件设备英寸屏幕显示效果好色彩准确对比度强性能强劲续航优秀可以用来开发和设计深空灰事事玩得转买前生产力买后爱奇艺绿色超瓷晶面板玻璃背板搭配铝金属边框曲线优美的圆角设计大小正好一只手就抓住深得我心唯一缺点大概就是续航不够第三代标准版第三代对比第二代提升很大和我一样不喜欢入耳式耳机的可以入空间音频等功能确实新颖第一次使用有被惊艳到出行用来出行的实物及设备黑色始终为我的健康放哨深夜弹出站立提醒不过确实有效的提高了我的运动频率配合全家桶还是非常棒的产品缺点依然是续航双肩包黑色国家地理黑色大包正好装下寸并且背起来很舒适底部自带防雨罩也好用各种奇怪的小口袋深得我心学生书包红白色国家地理黑色大包冰冰同款颜值在线且实用主题配置文件中开启中关于和我的装备的注释导航栏我的装备注意缩进页面配置主题内置了一个简单的页面可在设置中开启本地预览时访问出错的网站是不会跳到页面的如需本地预览请访问页面没有找到',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-10-10 23:00:29',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><a id="site-name" href="/" accesskey="h"><div class="title">伊森笔记</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a><div id="he-plugin-simple"></div><script>var WIDGET = {
+  "CONFIG": {
+    "modules": "0124",
+    "background": "2",
+    "tmpColor": "FFFFFF",
+    "tmpSize": "16",
+    "cityColor": "FFFFFF",
+    "citySize": "16",
+    "aqiColor": "E8D87B",
+    "aqiSize": "16",
+    "weatherIconSize": "24",
+    "alertIconSize": "18",
+    "padding": "10px 10px 10px 10px",
+    "shadow": "0",
+    "language": "auto",
+    "borderRadius": "20",
+    "fixed": "true",
+    "vertical": "top",
+    "horizontal": "left",
+    "left": "20",
+    "top": "7.1",
+    "key": "df245676fb434a0691ead1c63341cd94"
+  }
+}
+</script><link rel="stylesheet" href="https://widget.qweather.net/simple/static/css/he-simple.css?v=1.4.0"/><script src="https://widget.qweather.net/simple/static/js/he-simple.js?v=1.4.0"></script></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/fcircle/"><i class="anzhiyufont anzhiyu-icon-artstation faa-tada" style="font-size: 0.9em;"></i><span> 朋友圈</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/bangumis/"><i class="anzhiyufont anzhiyu-icon-bilibili faa-tada" style="font-size: 0.9em;"></i><span> 追番页</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/equipment/"><i class="anzhiyufont anzhiyu-icon-fire faa-tada" style="font-size: 0.9em;"></i><span> 我的装备</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索🔍" accesskey="s"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span> 搜索</span></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="/img/qrcode-wechat.jpg" target="_blank"><img class="post-qr-code-img" alt="微信" src="/img/qrcode-wechat.jpg"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/qrcode-alipay.jpg" target="_blank"><img class="post-qr-code-img" alt="支付宝" src="/img/qrcode-alipay.jpg"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/AWK/" style="font-size: 1.05rem;">AWK<sup>1</sup></a><a href="/tags/Crontab/" style="font-size: 1.05rem;">Crontab<sup>1</sup></a><a href="/tags/Element/" style="font-size: 1.05rem;">Element<sup>1</sup></a><a href="/tags/Gin/" style="font-size: 1.05rem;">Gin<sup>1</sup></a><a href="/tags/Git/" style="font-size: 1.05rem;">Git<sup>1</sup></a><a href="/tags/Go/" style="font-size: 1.05rem;">Go<sup>6</sup></a><a href="/tags/Hexo/" style="font-size: 1.05rem;">Hexo<sup>3</sup></a><a href="/tags/LAMP/" style="font-size: 1.05rem;">LAMP<sup>1</sup></a><a href="/tags/LNMP/" style="font-size: 1.05rem;">LNMP<sup>1</sup></a><a href="/tags/Laravel/" style="font-size: 1.05rem;">Laravel<sup>1</sup></a><a href="/tags/Linux/" style="font-size: 1.05rem;">Linux<sup>2</sup></a><a href="/tags/MYSQL/" style="font-size: 1.05rem;">MYSQL<sup>1</sup></a><a href="/tags/Mac/" style="font-size: 1.05rem;">Mac<sup>1</sup></a><a href="/tags/Node/" style="font-size: 1.05rem;">Node<sup>5</sup></a><a href="/tags/Nvm/" style="font-size: 1.05rem;">Nvm<sup>1</sup></a><a href="/tags/Ubuntu/" style="font-size: 1.05rem;">Ubuntu<sup>1</sup></a><a href="/tags/Unbuntu/" style="font-size: 1.05rem;">Unbuntu<sup>2</sup></a><a href="/tags/Vue/" style="font-size: 1.05rem;">Vue<sup>3</sup></a><a href="/tags/cnpm/" style="font-size: 1.05rem;">cnpm<sup>1</sup></a><a href="/tags/npm/" style="font-size: 1.05rem;">npm<sup>2</sup></a><a href="/tags/yarn/" style="font-size: 1.05rem;">yarn<sup>1</sup></a><a href="/tags/%E4%B8%BB%E9%A2%98/" style="font-size: 1.05rem;">主题<sup>1</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/09/"><span class="card-archive-list-date">九月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">9</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/08/"><span class="card-archive-list-date">八月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">7</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/01/"><span class="card-archive-list-date">一月 2021</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/07/"><span class="card-archive-list-date">七月 2020</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/03/"><span class="card-archive-list-date">三月 2020</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">6</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2019/12/"><span class="card-archive-list-date">十二月 2019</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div><div class="console-btn-item" id="consoleKeyboard" onclick="anzhiyu.keyboardToggle()" title="快捷键开关"><a class="keyboard-switch"><i class="anzhiyufont anzhiyu-icon-keyboard"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url">前端</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/Hexo/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Hexo</span></a></span></div></div><h1 class="post-title" itemprop="name headline">Hexo 页面配置</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2024-09-04T19:06:45.339Z" title="发表于 2024-09-05 03:06:45">2024-09-05</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2024-10-10T15:00:29.682Z" title="更新于 2024-10-10 23:00:29">2024-10-10</time></span></div><div class="meta-secondline"><span class="post-meta-separator"></span><span class="post-meta-wordcount"><i class="anzhiyufont anzhiyu-icon-file-word post-meta-icon" title="文章字数"></i><span class="post-meta-label" title="文章字数">字数总计:</span><span class="word-count" title="文章字数">8.3k</span><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-clock post-meta-icon" title="阅读时长"></i><span class="post-meta-label" title="阅读时长">阅读时长:</span><span>35分钟</span></span><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为深圳"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>深圳</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src=""></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="https://caoyixiong.com/post/75a1266d.html"><header><a class="post-meta-categories" href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url">前端</a><a href="/tags/Hexo/" tabindex="-1" itemprop="url">Hexo</a><h1 id="CrawlerTitle" itemprop="name headline">Hexo 页面配置</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">Ethan</span><time itemprop="dateCreated datePublished" datetime="2024-09-04T19:06:45.339Z" title="发表于 2024-09-05 03:06:45">2024-09-05</time><time itemprop="dateCreated datePublished" datetime="2024-10-10T15:00:29.682Z" title="更新于 2024-10-10 23:00:29">2024-10-10</time></header><h2 id="Front-matter-的基本认识"><a href="#Front-matter-的基本认识" class="headerlink" title="Front-matter 的基本认识"></a>Front-matter 的基本认识</h2><p><code>Front-matter</code> 是 <code>markdown</code> 文件最上方以 <code>---</code> 分隔的区域，用于指定个别档案的变数。其中又分为两种 markdown 里：Page Front-matter 用于页面配置、Post Front-matter 用于文章页配置。</p>
+<h3 id="Page-Front-matter"><a href="#Page-Front-matter" class="headerlink" title="Page Front-matter"></a>Page Front-matter</h3><table>
+<thead>
+<tr>
+<th align="left">写法</th>
+<th align="left">解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">title</td>
+<td align="left">【必需】页面标题</td>
+</tr>
+<tr>
+<td align="left">date</td>
+<td align="left">【必需】页面创建日期</td>
+</tr>
+<tr>
+<td align="left">type</td>
+<td align="left">【必需】标签、分类、关于、音乐馆、友情链接、相册、相册详情、朋友圈、即刻页面需要配置</td>
+</tr>
+<tr>
+<td align="left">updated</td>
+<td align="left">【可选】页面更新日期</td>
+</tr>
+<tr>
+<td align="left">description</td>
+<td align="left">【可选】页面描述</td>
+</tr>
+<tr>
+<td align="left">keywords</td>
+<td align="left">【可选】页面关键字</td>
+</tr>
+<tr>
+<td align="left">comments</td>
+<td align="left">【可选】显示页面评论模块(默认 true)</td>
+</tr>
+<tr>
+<td align="left">top_img</td>
+<td align="left">【可选】页面顶部图片</td>
+</tr>
+<tr>
+<td align="left">mathjax</td>
+<td align="left">【可选】显示 mathjax(当设置 mathjax 的 per_page: false 时，才需要配置，默认 false)</td>
+</tr>
+<tr>
+<td align="left">katex</td>
+<td align="left">【可选】显示 katex(当设置 katex 的 per_page: false 时，才需要配置，默认 false)</td>
+</tr>
+<tr>
+<td align="left">aside</td>
+<td align="left">【可选】显示侧边栏 (默认 true)</td>
+</tr>
+<tr>
+<td align="left">aplayer</td>
+<td align="left">【可选】在需要的页面加载 aplayer 的 js 和 css,请参考文章下面的音乐 配置</td>
+</tr>
+<tr>
+<td align="left">highlight_shrink</td>
+<td align="left">【可选】配置代码框是否展开(true&#x2F;false)(默认为设置中 highlight_shrink 的配置)</td>
+</tr>
+<tr>
+<td align="left">top_single_background</td>
+<td align="left">【可选】部分页面的顶部模块背景图片</td>
+</tr>
+</tbody></table>
+<h3 id="Post-Front-matter"><a href="#Post-Front-matter" class="headerlink" title="Post Front-matter"></a>Post Front-matter</h3><table>
+<thead>
+<tr>
+<th align="left">写法</th>
+<th align="left">解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">title</td>
+<td align="left">【必需】文章标题</td>
+</tr>
+<tr>
+<td align="left">date</td>
+<td align="left">【必需】文章创建日期</td>
+</tr>
+<tr>
+<td align="left">updated</td>
+<td align="left">【可选】文章更新日期</td>
+</tr>
+<tr>
+<td align="left">tags</td>
+<td align="left">【可选】文章标签</td>
+</tr>
+<tr>
+<td align="left">categories</td>
+<td align="left">【可选】文章分类</td>
+</tr>
+<tr>
+<td align="left">keywords</td>
+<td align="left">【可选】文章关键字</td>
+</tr>
+<tr>
+<td align="left">description</td>
+<td align="left">【可选】文章描述</td>
+</tr>
+<tr>
+<td align="left">top_img</td>
+<td align="left">【可选】文章顶部图片</td>
+</tr>
+<tr>
+<td align="left">cover</td>
+<td align="left">【可选】文章缩略图(如果没有设置 top_img,文章页顶部将显示缩略图，可设为 false&#x2F;图片地址&#x2F;留空)</td>
+</tr>
+<tr>
+<td align="left">comments</td>
+<td align="left">【可选】显示文章评论模块(默认 true)</td>
+</tr>
+<tr>
+<td align="left">toc</td>
+<td align="left">【可选】显示文章 TOC(默认为设置中 toc 的 enable 配置)</td>
+</tr>
+<tr>
+<td align="left">toc_number</td>
+<td align="left">【可选】显示 toc_number(默认为设置中 toc 的 number 配置)</td>
+</tr>
+<tr>
+<td align="left">toc_style_simple</td>
+<td align="left">【可选】显示 toc 简洁模式</td>
+</tr>
+<tr>
+<td align="left">copyright</td>
+<td align="left">【可选】显示文章版权模块(默认为设置中 post_copyright 的 enable 配置)</td>
+</tr>
+<tr>
+<td align="left">copyright_author</td>
+<td align="left">【可选】文章版权模块的<code>文章作者</code></td>
+</tr>
+<tr>
+<td align="left">copyright_author_href</td>
+<td align="left">【可选】文章版权模块的<code>文章作者</code>链接</td>
+</tr>
+<tr>
+<td align="left">copyright_url</td>
+<td align="left">【可选】文章版权模块的<code>文章链接</code>链接</td>
+</tr>
+<tr>
+<td align="left">copyright_info</td>
+<td align="left">【可选】文章版权模块的版权声明文字</td>
+</tr>
+<tr>
+<td align="left">mathjax</td>
+<td align="left">【可选】显示 mathjax(当设置 mathjax 的 per_page: false 时，才需要配置，默认 false)</td>
+</tr>
+<tr>
+<td align="left">katex</td>
+<td align="left">【可选】显示 katex(当设置 katex 的 per_page: false 时，才需要配置，默认 false)</td>
+</tr>
+<tr>
+<td align="left">aplayer</td>
+<td align="left">【可选】在需要的页面加载 aplayer 的 js 和 css,请参考文章下面的<code>音乐</code> 配置</td>
+</tr>
+<tr>
+<td align="left">highlight_shrink</td>
+<td align="left">【可选】配置代码框是否展开(true&#x2F;false)(默认为设置中 highlight_shrink 的配置)</td>
+</tr>
+<tr>
+<td align="left">aside</td>
+<td align="left">【可选】显示侧边栏 (默认 true)</td>
+</tr>
+<tr>
+<td align="left">swiper_index</td>
+<td align="left">【可选】首页轮播图配置 index 索引，数字越小越靠前</td>
+</tr>
+<tr>
+<td align="left">top_group_index</td>
+<td align="left">【可选】首页右侧卡片组配置, 数字越小越靠前</td>
+</tr>
+<tr>
+<td align="left">ai</td>
+<td align="left">【可选】文章ai摘要</td>
+</tr>
+<tr>
+<td align="left">main_color</td>
+<td align="left">【可选】文章主色，必须是16进制颜色且有6位，不可缩减，例如#ffffff 不可写成#fff</td>
+</tr>
+</tbody></table>
+<ol>
+<li>首页轮播图配置: <code>swiper_index</code>, 数字越小越靠前</li>
+<li>首页卡片配置: <code>top_group_index</code>, 数字越小越靠前</li>
+<li>page 中<code>top_single_background</code>, 可配置部分页面的顶部背景图片</li>
+</ol>
+<h2 id="分类页配置（推荐）"><a href="#分类页配置（推荐）" class="headerlink" title="分类页配置（推荐）"></a>分类页配置（推荐）</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new page categories</span><br></pre></td></tr></table></figure>
+
+<p>修改文件 <code>source/categories/index.md</code> 添加 <code>type: &quot;categories&quot;</code></p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">分类</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2022-02-23 17:56:00</span></span><br><span class="line"><span class="attr">aside:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">top_img:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">&quot;categories&quot;</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="标签页配置（推荐）"><a href="#标签页配置（推荐）" class="headerlink" title="标签页配置（推荐）"></a>标签页配置（推荐）</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new page tags</span><br></pre></td></tr></table></figure>
+
+<p>修改文件 <code>source/tags/index.md</code> 添加 <code>type: &quot;tags&quot;</code></p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">标签</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2021-04-06 12:01:51</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">&quot;tags&quot;</span></span><br><span class="line"><span class="attr">comments:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">top_img:</span> <span class="literal">false</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">type</td>
+<td align="left">【必须】页面类型，必须为 tags</td>
+</tr>
+<tr>
+<td align="left">comments</td>
+<td align="left">【可选】是否显示评论</td>
+</tr>
+<tr>
+<td align="left">top_img</td>
+<td align="left">【可选】是否显示顶部图</td>
+</tr>
+<tr>
+<td align="left">orderby</td>
+<td align="left">【可选】排序方式 ：random&#x2F;name&#x2F;length</td>
+</tr>
+<tr>
+<td align="left">order</td>
+<td align="left">【可选】排序次序： 1, asc for ascending; -1, desc for descending</td>
+</tr>
+</tbody></table>
+<h2 id="友情链接配置（推荐）"><a href="#友情链接配置（推荐）" class="headerlink" title="友情链接配置（推荐）"></a>友情链接配置（推荐）</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new page <span class="built_in">link</span></span><br></pre></td></tr></table></figure>
+
+<p>修改文件 <code>source/link/index.md</code> 添加 <code>type: &quot;link&quot;</code></p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">link</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2020-12-01 22:19:45</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">&quot;link&quot;</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+
+<p>新建文件<code>source\_data\link.yml</code>，没有 <code>_data</code> 文件夹的话也请自己新建。以下是默认友链格式示例：</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="attr">class_name:</span> <span class="string">框架</span></span><br><span class="line">  <span class="attr">flink_style:</span> <span class="string">flexcard</span></span><br><span class="line">  <span class="attr">hundredSuffix:</span> <span class="string">&quot;&quot;</span></span><br><span class="line">  <span class="attr">link_list:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Hexo</span></span><br><span class="line">      <span class="attr">link:</span> <span class="string">https://hexo.io/zh-tw/</span></span><br><span class="line">      <span class="attr">avatar:</span> <span class="string">https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg</span></span><br><span class="line">      <span class="attr">descr:</span> <span class="string">快速、简单且强大的网站框架</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">anzhiyu主题</span></span><br><span class="line">      <span class="attr">link:</span> <span class="string">https://blog.anheyu.com/</span></span><br><span class="line">      <span class="attr">avatar:</span> <span class="string">https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg</span></span><br><span class="line">      <span class="attr">descr:</span> <span class="string">生活明朗，万物可爱</span></span><br><span class="line">      <span class="attr">siteshot:</span> <span class="string">https://npm.elemecdn.com/anzhiyu-theme-static@1.1.6/img/blog.anheyu.com.jpg</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> <span class="attr">class_name:</span> <span class="string">推荐博客</span></span><br><span class="line">  <span class="attr">flink_style:</span> <span class="string">telescopic</span></span><br><span class="line">  <span class="attr">hundredSuffix:</span> <span class="string">&quot;&quot;</span></span><br><span class="line">  <span class="attr">link_list:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">安知鱼</span></span><br><span class="line">      <span class="attr">link:</span> <span class="string">https://blog.anheyu.com/</span></span><br><span class="line">      <span class="attr">avatar:</span> <span class="string">https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg</span></span><br><span class="line">      <span class="attr">descr:</span> <span class="string">生活明朗，万物可爱</span></span><br><span class="line">      <span class="attr">siteshot:</span> <span class="string">https://npm.elemecdn.com/anzhiyu-theme-static@1.1.6/img/blog.anheyu.com.jpg</span></span><br><span class="line">      <span class="attr">color:</span> <span class="string">vip</span></span><br><span class="line">      <span class="attr">tag:</span> <span class="string">技术</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> <span class="attr">class_name:</span> <span class="string">小伙伴</span></span><br><span class="line">  <span class="attr">class_desc:</span> <span class="string">那些人，那些事</span></span><br><span class="line">  <span class="attr">flink_style:</span> <span class="string">anzhiyu</span></span><br><span class="line">  <span class="attr">hundredSuffix:</span> <span class="string">&quot;&quot;</span></span><br><span class="line">  <span class="attr">link_list:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">安知鱼</span></span><br><span class="line">      <span class="attr">link:</span> <span class="string">https://blog.anheyu.com/</span></span><br><span class="line">      <span class="attr">avatar:</span> <span class="string">https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg</span></span><br><span class="line">      <span class="attr">descr:</span> <span class="string">生活明朗，万物可爱</span></span><br><span class="line">      <span class="attr">recommend:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">class_name</td>
+<td align="left">【必填】友链分类名</td>
+</tr>
+<tr>
+<td align="left">class_desc</td>
+<td align="left">【可选】友链分类描述</td>
+</tr>
+<tr>
+<td align="left">flink_style</td>
+<td align="left">【必填】<code>flexcard</code>或者<code>anzhiyu</code>或者<code>telescopic</code></td>
+</tr>
+<tr>
+<td align="left">hundredSuffix</td>
+<td align="left">【可选】解决共同进步板块头像质量问题，配置后共同进步板块的头像会添加该后缀（请确保你的图片加上 hundredSuffix 的配置后依然可以访问）。 例如:<code>hundredSuffix: &quot;!w120&quot;</code></td>
+</tr>
+<tr>
+<td align="left">link_list</td>
+<td align="left">【必须】友链列表</td>
+</tr>
+<tr>
+<td align="left">link_list.name</td>
+<td align="left">【必须】友链名称</td>
+</tr>
+<tr>
+<td align="left">link_list.link</td>
+<td align="left">【必须】友链链接</td>
+</tr>
+<tr>
+<td align="left">link_list.avatar</td>
+<td align="left">【必须】友链头像</td>
+</tr>
+<tr>
+<td align="left">link_list.descr</td>
+<td align="left">【必须】友链描述</td>
+</tr>
+<tr>
+<td align="left">link_list.siteshot</td>
+<td align="left">【可选】flink_style 为 flexcard 或 telescopic 时友链的站点图片</td>
+</tr>
+<tr>
+<td align="left">link_list.recommend</td>
+<td align="left">【可选】快捷选项，等于<code>color:&quot;&quot;</code> + <code>tag: &quot;荐&quot;</code></td>
+</tr>
+<tr>
+<td align="left">link_list.tag</td>
+<td align="left">【可选】左上角的 tag，为当前友链打上标签 例如:”推荐”</td>
+</tr>
+<tr>
+<td align="left">link_list.color</td>
+<td align="left">【可选】tag 的十六进制背景颜色例如: “#646cff”，提供了两个快捷颜色选项分别是<code>vip</code>和<code>speed</code></td>
+</tr>
+</tbody></table>
+<p>主题配置文件中开启 <code>menu</code> 中友链和友人帐的注释，注意缩进！！！</p>
+<h2 id="与数百博主共同进步（样式存在异常）"><a href="#与数百博主共同进步（样式存在异常）" class="headerlink" title="与数百博主共同进步（样式存在异常）"></a>与数百博主共同进步（样式存在异常）</h2><p>在主题配置文件中<code>_config.anzhiyu.yml</code>中配置</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 友情链接顶部相关配置</span></span><br><span class="line"><span class="attr">linkPageTop:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">title:</span> <span class="string">与数百名博主无限进步</span></span><br><span class="line">  <span class="comment"># 添加博主友链的评论自定义格式</span></span><br><span class="line">  <span class="attr">addFriendPlaceholder:</span> <span class="string">&quot;昵称（请勿包含博客等字样）：\n网站地址（要求博客地址，请勿提交个人主页）：\n头像图片url（请提供尽可能清晰的图片，我会上传到我自己的图床）：\n描述：\n站点截图（可选）：\n&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>建议超过 30 以上的友链数开启，友链数目不够会导致头像无法铺满。</p>
+<h2 id="朋友圈页面配置（推荐）"><a href="#朋友圈页面配置（推荐）" class="headerlink" title="朋友圈页面配置（推荐）"></a>朋友圈页面配置（推荐）</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new page fcircle</span><br></pre></td></tr></table></figure>
+
+<p>修改文件<code>source\fcircle\index.md</code> 添加 <code>type: &#39;fcircle&#39;</code></p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">朋友圈</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2022-11-21 17:06:17</span></span><br><span class="line"><span class="attr">comments:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">aside:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">top_img:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">&quot;fcircle&quot;</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+
+<p>主题配置文件中开启<code>menu</code>中友链和朋友圈的注释，导航栏朋友圈，注意缩进！！！</p>
+<p>主题配置文件中开启 <code>friends_vue.enable</code>，自行设置 朋友圈后端地址 和 顶部模块背景，注意缩进！！！</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 朋友圈配置</span></span><br><span class="line"><span class="attr">friends_vue:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">vue_js:</span> <span class="string">https://npm.elemecdn.com/anzhiyu-theme-static@1.1.2/friends/index.f9a2b8d2.js</span></span><br><span class="line">  <span class="attr">apiurl:</span> <span class="comment"># 朋友圈后端地址</span></span><br><span class="line">  <span class="attr">top_background:</span></span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">备选值&#x2F;类型</th>
+<th align="left">解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">enable</td>
+<td align="left">boolean</td>
+<td align="left">【必须】是否启用</td>
+</tr>
+<tr>
+<td align="left">vue_js</td>
+<td align="left">url</td>
+<td align="left">【必须】朋友圈前端构建后的 url</td>
+</tr>
+<tr>
+<td align="left">apiurl</td>
+<td align="left">string</td>
+<td align="left">【必须】朋友圈后端 url</td>
+</tr>
+<tr>
+<td align="left">top_background</td>
+<td align="left">url</td>
+<td align="left">【可选】朋友圈顶部背景图</td>
+</tr>
+</tbody></table>
+<p>以下是本站配置</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">friends_vue:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">vue_js:</span> <span class="string">https://npm.elemecdn.com/anzhiyu-theme-static@1.1.2/friends/index.f9a2b8d2.js</span></span><br><span class="line">  <span class="attr">apiurl:</span> <span class="string">https://friends.anheyu.com/</span> <span class="comment"># 朋友圈后端地址</span></span><br><span class="line">  <span class="attr">top_background:</span> <span class="string">https://img02.anheyu.com/adminuploads/1/2022/08/21/630249e2df20f.jpg</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>其中 <code>vue_js</code> 参数，可以将 <code>https://npm.elemecdn.com/anzhiyu-theme-static@1.1.2/friends/index.f9a2b8d2.js</code> 下载下来后将其中的 <code>friends.anheyu.com</code>替换为您的后端 url 然后上传至您的存储端以 url 的形式使用。</p>
+</li>
+<li><p>第二种办法也可以自行下载项目后，修改代码中的 url 变量路径 <code>friends.anheyu.com</code> 为你自己的，然后执行 <code>npm run build</code> 构建后将 dist 文件夹中的 js 上传至您的存储端使用。原项目地址：<a target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-circle-of-friends-front/tree/anzhiyu">hexo-circle-of-friends-front</a></p>
+</li>
+</ul>
+<blockquote>
+<p>注意朋友圈后端爬取需使用 <code>common2</code>，否则无法爬取到您的友链数据。</p>
+</blockquote>
+<h2 id="留言板页面配置（推荐）"><a href="#留言板页面配置（推荐）" class="headerlink" title="留言板页面配置（推荐）"></a>留言板页面配置（推荐）</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-butterfly-envelope --save</span><br></pre></td></tr></table></figure>
+
+<p>在站点配置文件 <code>_config.yml</code> 中添加以下内容配置，更多配置请查看信笺样式留言板</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment">#envelope_comment</span></span><br><span class="line"><span class="comment">#seehttps://akilar.top/posts/e2d3c450/</span></span><br><span class="line"><span class="attr">envelope_comment:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span> <span class="comment">#控制开关</span></span><br><span class="line">  <span class="attr">custom_pic:</span></span><br><span class="line">    <span class="attr">cover:</span> <span class="string">https://npm.elemecdn.com/hexo-butterfly-envelope/lib/violet.jpg</span> <span class="comment">#信笺头部图片</span></span><br><span class="line">    <span class="attr">line:</span> <span class="string">https://npm.elemecdn.com/hexo-butterfly-envelope/lib/line.png</span> <span class="comment">#信笺底部图片</span></span><br><span class="line">    <span class="attr">beforeimg:</span> <span class="string">https://npm.elemecdn.com/hexo-butterfly-envelope/lib/before.png</span> <span class="comment"># 信封前半部分</span></span><br><span class="line">    <span class="attr">afterimg:</span> <span class="string">https://npm.elemecdn.com/hexo-butterfly-envelope/lib/after.png</span> <span class="comment"># 信封后半部分</span></span><br><span class="line">  <span class="attr">message:</span> <span class="comment">#信笺正文，多行文本，写法如下</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">有什么想问的？</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">有什么想说的？</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">有什么想吐槽的？</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">哪怕是有什么想吃的，都可以告诉我哦~</span></span><br><span class="line">  <span class="attr">bottom:</span> <span class="string">自动书记人偶竭诚为您服务！</span> <span class="comment">#仅支持单行文本</span></span><br><span class="line">  <span class="attr">height:</span> <span class="comment">#1024px，信封划出的高度</span></span><br><span class="line">  <span class="attr">path:</span> <span class="comment">#【可选】comments 的路径名称。默认为 comments，生成的页面为 comments/index.html</span></span><br><span class="line">  <span class="attr">front_matter:</span> <span class="comment">#【可选】comments页面的 front_matter 配置</span></span><br><span class="line">    <span class="attr">title:</span> <span class="string">留言板</span></span><br><span class="line">    <span class="attr">comments:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">top_img:</span> <span class="literal">false</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">envelope</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="音乐馆页配置（推荐）"><a href="#音乐馆页配置（推荐）" class="headerlink" title="音乐馆页配置（推荐）"></a>音乐馆页配置（推荐）</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new page music</span><br></pre></td></tr></table></figure>
+
+<p>修改文件 <code>source/music/index.md</code> 添加 <code>type: &quot;music&quot;</code></p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">音乐馆</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2021-04-24 21:41:30</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">music</span></span><br><span class="line"><span class="attr">aplayer:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">top_img:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">comments:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">aside:</span> <span class="literal">false</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+
+<p>新建 <code>source/json/music.json</code>，此 json 为切换歌单按钮的歌单数据。</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">[</span></span><br><span class="line">  <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;青花瓷&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;artist&quot;</span><span class="punctuation">:</span> <span class="string">&quot;周杰伦&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://npm.elemecdn.com/anzhiyu-music@1.0.4/青花瓷/青花瓷.mp3&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;cover&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://y.qq.com/music/photo_new/T002R300x300M000002eFUFm2XYZ7z_2.jpg?max_age=2592000&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;lrc&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://npm.elemecdn.com/anzhiyu-music@1.0.4/青花瓷/青花瓷.lrc&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;稻香&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;artist&quot;</span><span class="punctuation">:</span> <span class="string">&quot;周杰伦&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://npm.elemecdn.com/anzhiyu-music@1.0.1/周杰伦/稻香/稻香.mp3&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;cover&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://y.qq.com/music/photo_new/T002R300x300M000002Neh8l0uciQZ_1.jpg?max_age=2592000&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;lrc&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://npm.elemecdn.com/anzhiyu-music@1.0.1/周杰伦/稻香/稻香.lrc&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;晴天&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;artist&quot;</span><span class="punctuation">:</span> <span class="string">&quot;周杰伦&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://npm.elemecdn.com/anzhiyu-music@1.0.2/晴天/晴天.mp3&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;cover&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://y.qq.com/music/photo_new/T002R300x300M000000MkMni19ClKG_3.jpg?max_age=2592000&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;lrc&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://npm.elemecdn.com/anzhiyu-music@1.0.2/晴天/晴天.lrc&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;七里香&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;artist&quot;</span><span class="punctuation">:</span> <span class="string">&quot;周杰伦&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://npm.elemecdn.com/anzhiyu-music@1.0.2/七里香/七里香.mp3&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;cover&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://y.qq.com/music/photo_new/T002R300x300M000003DFRzD192KKD_1.jpg?max_age=2592000&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;lrc&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://npm.elemecdn.com/anzhiyu-music@1.0.2/七里香/七里香.lrc&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;花海&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;artist&quot;</span><span class="punctuation">:</span> <span class="string">&quot;周杰伦&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://npm.elemecdn.com/anzhiyu-music-jay@1.0.1/花海/花海.flac&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;cover&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://y.qq.com/music/photo_new/T002R300x300M000002Neh8l0uciQZ_1.jpg?max_age=2592000&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;lrc&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://npm.elemecdn.com/anzhiyu-music-jay@1.0.1/花海/花海.lrc&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;反方向的钟&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;artist&quot;</span><span class="punctuation">:</span> <span class="string">&quot;周杰伦&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://npm.elemecdn.com/anzhiyu-music-jay@1.0.1/反方向的钟/反方向的钟.flac&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;cover&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://y.qq.com/music/photo_new/T002R300x300M000000f01724fd7TH_1.jpg?max_age=2592000&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;lrc&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://npm.elemecdn.com/anzhiyu-music-jay@1.0.1/反方向的钟/反方向的钟.lrc&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;兰亭序&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;artist&quot;</span><span class="punctuation">:</span> <span class="string">&quot;周杰伦&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://npm.elemecdn.com/anzhiyu-music@1.0.1/周杰伦/兰亭序/兰亭序.mp3&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;cover&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://y.qq.com/music/photo_new/T002R300x300M000002Neh8l0uciQZ_1.jpg?max_age=2592000&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;lrc&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://npm.elemecdn.com/anzhiyu-music@1.0.1/周杰伦/兰亭序/兰亭序.lrc&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;说好的辛福呢&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;artist&quot;</span><span class="punctuation">:</span> <span class="string">&quot;周杰伦&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://npm.elemecdn.com/anzhiyu-music@1.0.2/说好的辛福呢/说好的辛福呢.mp3&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;cover&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://y.qq.com/music/photo_new/T002R300x300M000002Neh8l0uciQZ_1.jpg?max_age=2592000&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;lrc&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://npm.elemecdn.com/anzhiyu-music@1.0.2/说好的辛福呢/说好的幸福呢.lrc&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;等你下课 (with 杨瑞代)&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;artist&quot;</span><span class="punctuation">:</span> <span class="string">&quot;周杰伦&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://npm.elemecdn.com/anzhiyu-music@1.0.1/周杰伦/等你下课/等你下课.mp3&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;cover&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://y.qq.com/music/photo_new/T002R300x300M000003bSL0v4bpKAx_1.jpg?max_age=2592000&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;lrc&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://npm.elemecdn.com/anzhiyu-music@1.0.1/周杰伦/等你下课/等你下课.lrc&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;我落泪情绪零碎&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;artist&quot;</span><span class="punctuation">:</span> <span class="string">&quot;周杰伦&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://npm.elemecdn.com/anzhiyu-music@1.0.2/我落泪情绪零碎/我落泪情绪零碎.mp3&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;cover&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://y.qq.com/music/photo_new/T002R300x300M000000bviBl4FjTpO_1.jpg?max_age=2592000&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;lrc&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://npm.elemecdn.com/anzhiyu-music@1.0.2/我落泪情绪零碎/我落泪情绪零碎.lrc&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;听妈妈的话&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;artist&quot;</span><span class="punctuation">:</span> <span class="string">&quot;周杰伦&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://npm.elemecdn.com/anzhiyu-music@1.0.2/听妈妈的话/听妈妈的话.mp3&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;cover&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://y.qq.com/music/photo_new/T002R300x300M000002jLGWe16Tf1H_1.jpg?max_age=2592000&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;lrc&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://npm.elemecdn.com/anzhiyu-music@1.0.2/听妈妈的话/听妈妈的话.lrc&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;明明就&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;artist&quot;</span><span class="punctuation">:</span> <span class="string">&quot;周杰伦&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://npm.elemecdn.com/anzhiyu-music-jay@1.0.1/明明就/明明就.flac&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;cover&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://y.qq.com/music/photo_new/T002R300x300M000003Ow85E3pnoqi_1.jpg?max_age=2592000&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;lrc&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://npm.elemecdn.com/anzhiyu-music-jay@1.0.1/明明就/明明就.lrc&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;我是如此相信&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;artist&quot;</span><span class="punctuation">:</span> <span class="string">&quot;周杰伦&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://npm.elemecdn.com/anzhiyu-music-jay@1.0.1/我是如此相信/我是如此相信.flac&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;cover&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://y.qq.com/music/photo_new/T002R300x300M000001hGx1Z0so1YX_1.jpg?max_age=2592000&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;lrc&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://npm.elemecdn.com/anzhiyu-music-jay@1.0.1/我是如此相信/我是如此相信.lrc&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;发如雪&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;artist&quot;</span><span class="punctuation">:</span> <span class="string">&quot;周杰伦&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://npm.elemecdn.com/anzhiyu-music@1.0.3/发如雪/发如雪.mp3&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;cover&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://y.qq.com/music/photo_new/T002R300x300M0000024bjiL2aocxT_3.jpg?max_age=2592000&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;lrc&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://npm.elemecdn.com/anzhiyu-music@1.0.3/发如雪/发如雪.lrc&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;以父之名&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;artist&quot;</span><span class="punctuation">:</span> <span class="string">&quot;周杰伦&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://npm.elemecdn.com/anzhiyu-music@1.0.3/以父之名/以父之名.mp3&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;cover&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://y.qq.com/music/photo_new/T002R300x300M000000MkMni19ClKG_3.jpg?max_age=2592000&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;lrc&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://npm.elemecdn.com/anzhiyu-music@1.0.3/以父之名/以父之名.lrc&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;园游会&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;artist&quot;</span><span class="punctuation">:</span> <span class="string">&quot;周杰伦&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://npm.elemecdn.com/anzhiyu-music@1.0.3/园游会/园游会.flac&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;cover&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://y.qq.com/music/photo_new/T002R300x300M000003DFRzD192KKD_1.jpg?max_age=2592000&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;lrc&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://npm.elemecdn.com/anzhiyu-music@1.0.3/园游会/园游会.lrc&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;本草纲目&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;artist&quot;</span><span class="punctuation">:</span> <span class="string">&quot;周杰伦&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://npm.elemecdn.com/anzhiyu-music@1.0.4/本草纲目/本草纲目.mp3&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;cover&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://y.qq.com/music/photo_new/T002R300x300M000002jLGWe16Tf1H_1.jpg?max_age=2592000&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;lrc&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://npm.elemecdn.com/anzhiyu-music@1.0.4/本草纲目/本草纲目.lrc&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;龙卷风&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;artist&quot;</span><span class="punctuation">:</span> <span class="string">&quot;周杰伦&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://npm.elemecdn.com/anzhiyu-music@1.0.4/龙卷风/龙卷风.mp3&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;cover&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://y.qq.com/music/photo_new/T002R300x300M000000f01724fd7TH_1.jpg?max_age=2592000&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;lrc&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://npm.elemecdn.com/anzhiyu-music@1.0.4/龙卷风/龙卷风.lrc&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">]</span></span><br></pre></td></tr></table></figure>
+
+<p>配置文件<code>_config.yml</code>中添加以下配置，注意不是主题配置文件</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># APlayer</span></span><br><span class="line"><span class="comment"># https://github.com/MoePlayer/hexo-tag-aplayer/blob/master/docs/README-zh_cn.md</span></span><br><span class="line"><span class="attr">aplayer:</span></span><br><span class="line">  <span class="attr">meting:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">asset_inject:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<p>主题配置文件中开启 <code>menu</code> 中我的和音乐馆的注释，注意缩进！！！</p>
+<blockquote>
+<p>如何修改默认歌单?</p>
+</blockquote>
+<p>将 <code>menu</code> 中音乐馆的路径修改为以下格式即可<code>/music/?id=1708664797&amp;server=tencent</code>，支持 <code>id</code> 和 <code>server</code> 参数。</p>
+<p><code>id</code> 与 <code>server</code> 的填写请参考 <a target="_blank" rel="noopener" href="https://github.com/metowolf/MetingJS">MetingJS</a></p>
+<h2 id="追番页面配置（推荐）"><a href="#追番页面配置（推荐）" class="headerlink" title="追番页面配置（推荐）"></a>追番页面配置（推荐）</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-bilibili-bangumi --save</span><br></pre></td></tr></table></figure>
+
+<p>在 hexo 配置文件<code>_config.yml</code>中加入以下配置，注意不是主题配置文件，更多配置请参考 <a target="_blank" rel="noopener" href="https://github.com/HCLonely/hexo-bilibili-bangumi">hexo-bilibili-bangumi</a></p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 追番插件</span></span><br><span class="line"><span class="comment"># https://github.com/HCLonely/hexo-bilibili-bangumi</span></span><br><span class="line"><span class="attr">bangumi:</span> <span class="comment"># 追番设置</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">source:</span> <span class="string">bili</span></span><br><span class="line">  <span class="attr">path:</span></span><br><span class="line">  <span class="attr">vmid:</span> <span class="number">372204786</span></span><br><span class="line">  <span class="attr">title:</span> <span class="string">&quot;追番列表&quot;</span></span><br><span class="line">  <span class="attr">quote:</span> <span class="string">&quot;生命不息，追番不止！&quot;</span></span><br><span class="line">  <span class="attr">show:</span> <span class="number">1</span></span><br><span class="line">  <span class="attr">lazyload:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">loading:</span></span><br><span class="line">  <span class="attr">showMyComment:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">pagination:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">metaColor:</span></span><br><span class="line">  <span class="attr">color:</span></span><br><span class="line">  <span class="attr">webp:</span></span><br><span class="line">  <span class="attr">progress:</span></span><br><span class="line">  <span class="attr">extraOrder:</span></span><br><span class="line">  <span class="attr">proxy:</span></span><br><span class="line">    <span class="attr">host:</span> <span class="string">&quot;代理host&quot;</span></span><br><span class="line">    <span class="attr">port:</span> <span class="string">&quot;代理端口&quot;</span></span><br><span class="line">  <span class="attr">extra_options:</span></span><br><span class="line">    <span class="attr">top_img:</span> <span class="literal">false</span></span><br><span class="line">    <span class="attr">lazyload:</span></span><br><span class="line">      <span class="attr">enable:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="相册页面配置（推荐）"><a href="#相册页面配置（推荐）" class="headerlink" title="相册页面配置（推荐）"></a>相册页面配置（推荐）</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new page album</span><br></pre></td></tr></table></figure>
+
+<p>修改文件 <code>source/album/index.md</code> 添加 <code>type: &quot;album&quot;</code></p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">相册集</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2022-10-23 15:57:51</span></span><br><span class="line"><span class="attr">aside:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">top_img:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">&quot;album&quot;</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+
+<p>主题配置文件中开启<code>menu</code>中我的和相册集的注释，注意缩进！！！</p>
+<p>新建文件 <code>source\_data\album.yml</code> ，没有 <code>_data</code> 文件夹的话也请自己新建。</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="attr">class_name:</span> <span class="string">世界各地夕阳与风景</span></span><br><span class="line">  <span class="attr">path_name:</span> <span class="string">/wordScenery</span></span><br><span class="line">  <span class="attr">type:</span> <span class="number">2</span></span><br><span class="line">  <span class="attr">description:</span> <span class="string">因为到不了世界各地，所以请网友们发来了各地的夕阳与风景🌇。</span></span><br><span class="line">  <span class="attr">cover:</span> <span class="string">https://bu.dusays.com/2023/04/09/64329399d1175.jpg</span></span><br><span class="line">  <span class="attr">top_background:</span> <span class="string">https://bu.dusays.com/2023/06/30/649e546ada7dd.webp</span></span><br><span class="line">  <span class="attr">rowHeight:</span> <span class="number">220</span></span><br><span class="line">  <span class="attr">limit:</span> <span class="number">10</span></span><br><span class="line">  <span class="attr">lazyload:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">btnLazyload:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">url:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">top_link:</span> <span class="string">/album</span></span><br><span class="line">  <span class="attr">top_btn_text:</span> <span class="string">返回</span></span><br><span class="line">  <span class="attr">album_list:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">date:</span> <span class="number">2022</span><span class="string">/10/26</span> <span class="number">01</span><span class="string">:00:00</span></span><br><span class="line">      <span class="attr">content:</span> <span class="string">湘潭的一角。</span></span><br><span class="line">      <span class="attr">address:</span> <span class="string">湖南湘潭</span></span><br><span class="line">      <span class="attr">from:</span> <span class="string">再吃一口就减肥</span></span><br><span class="line">      <span class="attr">image:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">https://bu.dusays.com/2023/04/09/64329399db122.webp</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">date:</span> <span class="number">2022-10-25</span></span><br><span class="line">      <span class="attr">content:</span> <span class="string">洛阳暴雨后的天空。</span></span><br><span class="line">      <span class="attr">address:</span> <span class="string">河南洛阳</span></span><br><span class="line">      <span class="attr">from:</span> <span class="string">紫菜卷</span></span><br><span class="line">      <span class="attr">image:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">https://bu.dusays.com/2023/04/09/64329399db122.webp</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">https://bu.dusays.com/2023/04/09/64329399db2e1.webp</span></span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> <span class="attr">class_name:</span> <span class="string">我的日常</span></span><br><span class="line">  <span class="attr">path_name:</span> <span class="string">/dailyPhoto</span></span><br><span class="line">  <span class="attr">type:</span> <span class="number">1</span></span><br><span class="line">  <span class="attr">description:</span> <span class="string">这里存放的是有关我自己的一些沙雕生活与有趣的事情。</span></span><br><span class="line">  <span class="attr">top_link:</span> <span class="string">/album</span></span><br><span class="line">  <span class="attr">top_btn_text:</span> <span class="string">返回</span></span><br><span class="line">  <span class="attr">top_background:</span> <span class="string">https://bu.dusays.com/2023/04/09/64329399cea5a.webp</span></span><br><span class="line">  <span class="attr">cover:</span> <span class="string">https://bu.dusays.com/2023/04/09/64329399cea5a.webp</span></span><br><span class="line">  <span class="attr">album_list:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">date:</span> <span class="number">2022-10-24</span></span><br><span class="line">      <span class="attr">content:</span> <span class="string">老妹的画</span></span><br><span class="line">      <span class="attr">image:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">https://bu.dusays.com/2023/04/09/643293997b92b.jpeg</span></span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">备选值&#x2F;类型</th>
+<th align="left">解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">class_name</td>
+<td align="left">string</td>
+<td align="left">【必须】页面类</td>
+</tr>
+<tr>
+<td align="left">path_name</td>
+<td align="left">url</td>
+<td align="left">【必须】当前相册路径</td>
+</tr>
+<tr>
+<td align="left">type</td>
+<td align="left">number</td>
+<td align="left">【必须】当前相册页面样式类型</td>
+</tr>
+<tr>
+<td align="left">description</td>
+<td align="left">string</td>
+<td align="left">【必须】当前相册描述</td>
+</tr>
+<tr>
+<td align="left">cover</td>
+<td align="left">url</td>
+<td align="left">【必须】当前相册 cover 图片</td>
+</tr>
+<tr>
+<td align="left">rowHeight</td>
+<td align="left">number</td>
+<td align="left">【可选】仅当 type 为 2 时有效，当前相册 rowHeight</td>
+</tr>
+<tr>
+<td align="left">limit</td>
+<td align="left">number</td>
+<td align="left">【可选】仅当 type 为 2 时有效，当前相册 一次懒加载的数量</td>
+</tr>
+<tr>
+<td align="left">lazyload</td>
+<td align="left">boolean</td>
+<td align="left">【可选】仅当 type 为 2 时有效，当前相册 lazyload 是否开启懒加载，默认懒加载为滚动懒加载，type 为 1 时懒加载不可关闭。</td>
+</tr>
+<tr>
+<td align="left">btnLazyload</td>
+<td align="left">boolean</td>
+<td align="left">【可选】仅当 type 为 2 且 lazyload 开启 时有效，当前相册 lazyload 懒加载的方式，默认为滚动懒加载，开启本选项后为按钮点击懒加载。</td>
+</tr>
+<tr>
+<td align="left">album_list</td>
+<td align="left">list</td>
+<td align="left">【必须】当前相册内图片列表</td>
+</tr>
+<tr>
+<td align="left">url</td>
+<td align="left">url</td>
+<td align="left">【可选】仅当 type 为 2 时有效，可以加载远程的 json 数据。</td>
+</tr>
+<tr>
+<td align="left">album_list.date</td>
+<td align="left">date</td>
+<td align="left">【必须】当前图片创建时间</td>
+</tr>
+<tr>
+<td align="left">album_list.content</td>
+<td align="left">string</td>
+<td align="left">【必须】当前图片描述内容</td>
+</tr>
+<tr>
+<td align="left">album_list.image</td>
+<td align="left">list</td>
+<td align="left">【必须】当前图片集，可以多张</td>
+</tr>
+<tr>
+<td align="left">album_list.from</td>
+<td align="left">string</td>
+<td align="left">【可选】当前图片的创建人，未填写则不显示</td>
+</tr>
+<tr>
+<td align="left">album_list.address</td>
+<td align="left">string</td>
+<td align="left">【必须】当前图片地址</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>注意示例数据中的图片不保证可用性。</p>
+</blockquote>
+<p>由于相册页面需要很多的 <code>page</code>，所以在写数据的时候自行写入路径 <code>path_name</code>，示例数据中有两个<code>path_name</code>，所以需要再创建两个页面</p>
+<p>注意新建的页面必须与 <code>path_name</code> 一致。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new page dailyPhoto</span><br><span class="line">$ hexo new page wordScenery</span><br></pre></td></tr></table></figure>
+
+<p>文件 <code>source/dailyPhoto/index.md</code> 和<code>source/wordScenery/index.md</code> 为相册集详情页，在详情页加上 <code>type: &quot;album_detail&quot;</code></p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">日常生活</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2022-10-23 15:57:51</span></span><br><span class="line"><span class="attr">aside:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">top_img:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">&quot;album_detail&quot;</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">世界各地风景</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2022-10-23 15:57:51</span></span><br><span class="line"><span class="attr">aside:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">top_img:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">&quot;album_detail&quot;</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+
+<p>远程加载json示例数据（暂不知道是干啥的）</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">[</span></span><br><span class="line">  <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/IMG_0556.jpg&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;alt&quot;</span><span class="punctuation">:</span> <span class="string">&quot;IMG_0556.jpg&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;title&quot;</span><span class="punctuation">:</span> <span class="string">&quot;这是title&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/IMG_0472.jpg&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;alt&quot;</span><span class="punctuation">:</span> <span class="string">&quot;IMG_0472.jpg&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/IMG_0453.jpg&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;alt&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/IMG_0931.jpg&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;alt&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">]</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="关于页面配置（推荐）"><a href="#关于页面配置（推荐）" class="headerlink" title="关于页面配置（推荐）"></a>关于页面配置（推荐）</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new page about</span><br></pre></td></tr></table></figure>
+
+<p>修改文件 <code>source/about/index.md</code> 添加 <code>type: &quot;about&quot;</code></p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">关于</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2021-03-30 15:57:51</span></span><br><span class="line"><span class="attr">aside:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">top_img:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">background:</span> <span class="string">&quot;#f8f9fe&quot;</span></span><br><span class="line"><span class="attr">comments:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">&quot;about&quot;</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+
+<p>主题配置文件中开启<code>menu</code>中关于和关于本人的注释，注意缩进！！！</p>
+<p>新建 <code>source/_data/about.yml</code>，输入以下内容</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="attr">class_name:</span> <span class="string">关于页</span></span><br><span class="line">  <span class="attr">subtitle:</span> <span class="string">生活明朗，万物可爱✨</span></span><br><span class="line">  <span class="attr">avatarImg:</span> <span class="string">https://npm.elemecdn.com/anzhiyu-blog-static@1.0.0/img/avatar.webp</span></span><br><span class="line">  <span class="attr">avatarSkills:</span></span><br><span class="line">    <span class="attr">left:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">🤖️</span> <span class="string">数码科技爱好者</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">🔍</span> <span class="string">分享与热心帮助</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">🏠</span> <span class="string">智能家居小能手</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">🔨</span> <span class="string">设计开发一条龙</span></span><br><span class="line">    <span class="attr">right:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">专修交互与设计</span> <span class="string">🤝</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">脚踏实地行动派</span> <span class="string">🏃</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">团队小组发动机</span> <span class="string">🧱</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">壮汉人狠话不多</span> <span class="string">💢</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">陈志伟</span></span><br><span class="line">  <span class="attr">description:</span> <span class="string">是一名</span> <span class="string">前端工程师、学生、独立开发者、博主</span></span><br><span class="line">  <span class="attr">aboutsiteTips:</span></span><br><span class="line">    <span class="attr">tips:</span> <span class="string">追求</span></span><br><span class="line">    <span class="attr">title1:</span> <span class="string">源于</span></span><br><span class="line">    <span class="attr">title2:</span> <span class="string">热爱而去</span> <span class="string">感受</span></span><br><span class="line">    <span class="attr">word:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">学习</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">生活</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">程序</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">体验</span></span><br><span class="line">  <span class="attr">helloAbout:</span> <span class="string">Hello</span> <span class="string">there!</span></span><br><span class="line">  <span class="attr">skillsTips:</span></span><br><span class="line">    <span class="attr">tips:</span> <span class="string">技能</span></span><br><span class="line">    <span class="attr">title:</span> <span class="string">开启创造力</span></span><br><span class="line">  <span class="attr">careers:</span></span><br><span class="line">    <span class="attr">tips:</span> <span class="string">生涯</span></span><br><span class="line">    <span class="attr">title:</span> <span class="string">无限进步</span></span><br><span class="line">    <span class="attr">list:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">desc:</span> <span class="string">EDU,软件工程专业</span></span><br><span class="line">        <span class="attr">color:</span> <span class="string">&quot;#357ef5&quot;</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">desc:</span> <span class="string">EDU,软件工程专业</span></span><br><span class="line">        <span class="attr">color:</span> <span class="string">&quot;#357ef5&quot;</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">desc:</span> <span class="string">EDU,软件工程专业</span></span><br><span class="line">        <span class="attr">color:</span> <span class="string">&quot;#357ef5&quot;</span></span><br><span class="line">    <span class="attr">img:</span> <span class="string">https://bu.dusays.com/2023/04/21/644287166329b.png</span></span><br><span class="line">  <span class="attr">statistic:</span></span><br><span class="line">    <span class="attr">link:</span> <span class="string">/archives</span></span><br><span class="line">    <span class="attr">text:</span> <span class="string">文章隧道</span></span><br><span class="line">    <span class="attr">cover:</span> <span class="string">https://bu.dusays.com/2023/05/01/644f4b037b930.jpg</span></span><br><span class="line">  <span class="attr">map:</span></span><br><span class="line">    <span class="attr">title:</span> <span class="string">我现在住在</span></span><br><span class="line">    <span class="attr">StrengthenTitle:</span> <span class="string">中国，长沙市</span></span><br><span class="line">    <span class="attr">background:</span> <span class="string">https://bu.dusays.com/2023/07/05/64a4c61cb20ef.jpg</span></span><br><span class="line">    <span class="attr">backgroundDark:</span> <span class="string">https://bu.dusays.com/2023/07/05/64a4c63495ac5.jpg</span></span><br><span class="line">  <span class="attr">selfInfo:</span></span><br><span class="line">    <span class="attr">selfInfoTips1:</span> <span class="string">生于</span></span><br><span class="line">    <span class="attr">selfInfoContentYear:</span> <span class="number">2002</span></span><br><span class="line">    <span class="attr">selfInfoTips2:</span> <span class="string">湖南信息学院</span></span><br><span class="line">    <span class="attr">selfInfoContent2:</span> <span class="string">软件工程</span></span><br><span class="line">    <span class="attr">selfInfoTips3:</span> <span class="string">现在职业</span></span><br><span class="line">    <span class="attr">selfInfoContent3:</span> <span class="string">大三学生👨‍🎓</span></span><br><span class="line">  <span class="attr">personalities:</span></span><br><span class="line">    <span class="attr">author_name:</span> <span class="string">执政官</span></span><br><span class="line">    <span class="attr">personality_type:</span> <span class="string">ESFJ-A</span></span><br><span class="line">    <span class="attr">photo_url:</span> <span class="string">https://bu.dusays.com/2023/07/05/64a4c63495ac5.jpg</span></span><br><span class="line">    <span class="attr">personality_img:</span> <span class="string">https://npm.elemecdn.com/anzhiyu-blog@2.0.8/img/svg/ESFJ-A.svg</span></span><br><span class="line">    <span class="attr">name_url:</span> <span class="string">https://www.16personalities.com/ch/esfj-%E4%BA%BA%E6%A0%BC</span></span><br><span class="line">  <span class="attr">maxim:</span></span><br><span class="line">    <span class="attr">maxim_tips:</span> <span class="string">座右铭</span></span><br><span class="line">    <span class="attr">maxim_top:</span> <span class="string">生活明朗，</span></span><br><span class="line">    <span class="attr">maxim_bottom:</span> <span class="string">万物可爱。</span></span><br><span class="line">  <span class="attr">buff:</span></span><br><span class="line">    <span class="attr">buff_tips:</span> <span class="string">特长</span></span><br><span class="line">    <span class="attr">buff_top:</span> <span class="string">脑回路新奇的</span> <span class="string">酸菜鱼</span></span><br><span class="line">    <span class="attr">buff_bottom:</span> <span class="string">二次元指数</span> <span class="string">MAX</span></span><br><span class="line">  <span class="attr">game:</span></span><br><span class="line">    <span class="attr">game_tips:</span> <span class="string">爱好游戏</span></span><br><span class="line">    <span class="attr">game_title:</span> <span class="string">原神</span></span><br><span class="line">    <span class="attr">game_uid:</span> <span class="string">&quot;UID: 125766904&quot;</span></span><br><span class="line">    <span class="attr">game_bg:</span> <span class="string">https://bu.dusays.com/2023/04/22/64433bf26e25d.webp</span></span><br><span class="line">  <span class="attr">comic:</span></span><br><span class="line">    <span class="attr">comic_tips:</span> <span class="string">爱好番剧</span></span><br><span class="line">    <span class="attr">comic_title:</span> <span class="string">追番</span></span><br><span class="line">    <span class="attr">comic_list:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">约定的梦幻岛</span></span><br><span class="line">        <span class="attr">href:</span> <span class="string">https://www.bilibili.com/bangumi/media/md5267750/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1</span></span><br><span class="line">        <span class="attr">cover:</span> <span class="string">https://bu.dusays.com/2023/05/27/647166c44b414.webp</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">咒术回战</span></span><br><span class="line">        <span class="attr">href:</span> <span class="string">https://www.bilibili.com/bangumi/media/md28229899/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1</span></span><br><span class="line">        <span class="attr">cover:</span> <span class="string">https://bu.dusays.com/2023/05/24/646db4398832e.webp</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">紫罗兰永恒花园</span></span><br><span class="line">        <span class="attr">href:</span> <span class="string">https://www.bilibili.com/bangumi/media/md8892/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1</span></span><br><span class="line">        <span class="attr">cover:</span> <span class="string">https://bu.dusays.com/2023/05/24/646db43983d99.webp</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">鬼灭之刃</span></span><br><span class="line">        <span class="attr">href:</span> <span class="string">https://www.bilibili.com/bangumi/media/md22718131/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1</span></span><br><span class="line">        <span class="attr">cover:</span> <span class="string">https://bu.dusays.com/2023/05/24/646db439856a0.webp</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">JOJO的奇妙冒险</span> <span class="string">黄金之风</span></span><br><span class="line">        <span class="attr">href:</span> <span class="string">https://www.bilibili.com/bangumi/media/md135652/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1</span></span><br><span class="line">        <span class="attr">cover:</span> <span class="string">https://bu.dusays.com/2023/05/30/64760e38d651a.webp</span></span><br><span class="line">  <span class="attr">like:</span></span><br><span class="line">    <span class="attr">like_tips:</span> <span class="string">关注偏好</span></span><br><span class="line">    <span class="attr">like_title:</span> <span class="string">数码科技</span></span><br><span class="line">    <span class="attr">like_bg:</span> <span class="string">https://bu.dusays.com/2022/12/06/638f5f05ce1f7.jpg</span></span><br><span class="line">    <span class="attr">like_bottom:</span> <span class="string">手机、电脑软硬件</span></span><br><span class="line">  <span class="attr">music:</span></span><br><span class="line">    <span class="attr">music_tips:</span> <span class="string">音乐偏好</span></span><br><span class="line">    <span class="attr">music_title:</span> <span class="string">许嵩、民谣、华语流行</span></span><br><span class="line">    <span class="attr">music_bg:</span> <span class="string">https://p2.music.126.net/Mrg1i7DwcwjWBvQPIMt_Mg==/79164837213438.jpg</span></span><br><span class="line">    <span class="attr">music_link:</span> <span class="string">/music</span></span><br><span class="line">  <span class="attr">reward_list:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">海阔蓝</span></span><br><span class="line">      <span class="attr">amount:</span> <span class="number">8.8</span></span><br><span class="line">      <span class="attr">datatime:</span> <span class="number">2023-03-28</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">LK66</span></span><br><span class="line">      <span class="attr">amount:</span> <span class="number">66.6</span></span><br><span class="line">      <span class="attr">datatime:</span> <span class="number">2023-03-24</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">张时貳</span></span><br><span class="line">      <span class="attr">amount:</span> <span class="number">6.6</span></span><br><span class="line">      <span class="attr">datatime:</span> <span class="number">2023-01-22</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">ZeroAf</span></span><br><span class="line">      <span class="attr">amount:</span> <span class="number">9.9</span></span><br><span class="line">      <span class="attr">datatime:</span> <span class="number">2022-12-14</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">LuckyWangXi</span></span><br><span class="line">      <span class="attr">amount:</span> <span class="number">6.6</span></span><br><span class="line">      <span class="attr">datatime:</span> <span class="number">2022-12-14</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">刀中日月长</span></span><br><span class="line">      <span class="attr">amount:</span> <span class="number">10</span></span><br><span class="line">      <span class="attr">datatime:</span> <span class="number">2022-11-16</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">鹿啵包</span></span><br><span class="line">      <span class="attr">amount:</span> <span class="number">10</span></span><br><span class="line">      <span class="attr">datatime:</span> <span class="number">2022-11-08</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">疾速k</span></span><br><span class="line">      <span class="attr">amount:</span> <span class="number">50</span></span><br><span class="line">      <span class="attr">datatime:</span> <span class="number">2022-09-20</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">伴舟先生大霖子</span></span><br><span class="line">      <span class="attr">amount:</span> <span class="number">4.03</span></span><br><span class="line">      <span class="attr">datatime:</span> <span class="number">2022-10-27</span></span><br><span class="line">      <span class="attr">suffix:</span> <span class="string">贝壳</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Magica_0x0</span></span><br><span class="line">      <span class="attr">amount:</span> <span class="number">3.36</span></span><br><span class="line">      <span class="attr">datatime:</span> <span class="number">2022-10-07</span></span><br><span class="line">      <span class="attr">suffix:</span> <span class="string">贝壳</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">名字就是要短像这样</span></span><br><span class="line">      <span class="attr">amount:</span> <span class="number">3.36</span></span><br><span class="line">      <span class="attr">datatime:</span> <span class="number">2022-08-25</span></span><br><span class="line">      <span class="attr">suffix:</span> <span class="string">贝壳</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Leviathan520</span></span><br><span class="line">      <span class="attr">amount:</span> <span class="number">1.34</span></span><br><span class="line">      <span class="attr">datatime:</span> <span class="number">2022-08-23</span></span><br><span class="line">      <span class="attr">suffix:</span> <span class="string">贝壳</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">托马斯</span></span><br><span class="line">      <span class="attr">amount:</span> <span class="number">10</span></span><br><span class="line">      <span class="attr">datatime:</span> <span class="number">2022-08-19</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">哇是猫猫欸</span></span><br><span class="line">      <span class="attr">amount:</span> <span class="number">1.34</span></span><br><span class="line">      <span class="attr">datatime:</span> <span class="number">2022-08-19</span></span><br><span class="line">      <span class="attr">suffix:</span> <span class="string">贝壳</span></span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">备选值&#x2F;类型</th>
+<th align="left">解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">class_name</td>
+<td align="left">关于页</td>
+<td align="left">【必须】页面类</td>
+</tr>
+<tr>
+<td align="left">subtitle</td>
+<td align="left">string</td>
+<td align="left">【必须】副标题</td>
+</tr>
+<tr>
+<td align="left">avatarImg</td>
+<td align="left">url</td>
+<td align="left">【必须】头像链接</td>
+</tr>
+<tr>
+<td align="left">name</td>
+<td align="left">string</td>
+<td align="left">【必须 作者名称</td>
+</tr>
+<tr>
+<td align="left">description</td>
+<td align="left">string</td>
+<td align="left">【必须】描述</td>
+</tr>
+<tr>
+<td align="left">aboutsiteTips</td>
+<td align="left">object</td>
+<td align="left">【必须】站点关于提示相关配置</td>
+</tr>
+<tr>
+<td align="left">aboutsiteTips.tips</td>
+<td align="left">string</td>
+<td align="left">【必须】站点关于提示性文字</td>
+</tr>
+<tr>
+<td align="left">aboutsiteTips.title1</td>
+<td align="left">string</td>
+<td align="left">【必须】站点关于标题文字 1</td>
+</tr>
+<tr>
+<td align="left">aboutsiteTips.title2</td>
+<td align="left">string</td>
+<td align="left">【必须】站点关于标题文字 2</td>
+</tr>
+<tr>
+<td align="left">aboutsiteTips.word</td>
+<td align="left">list</td>
+<td align="left">【必须】站点关于标题滚动文字</td>
+</tr>
+<tr>
+<td align="left">helloAbout</td>
+<td align="left">string</td>
+<td align="left">【必须】hello 文字</td>
+</tr>
+<tr>
+<td align="left">skillsTips</td>
+<td align="left">object</td>
+<td align="left">【必须】技能相关配置</td>
+</tr>
+<tr>
+<td align="left">skillsTips.tips</td>
+<td align="left">string</td>
+<td align="left">【必须】技能提示文字</td>
+</tr>
+<tr>
+<td align="left">skillsTips.title</td>
+<td align="left">string</td>
+<td align="left">【必须】技能标题</td>
+</tr>
+<tr>
+<td align="left">careers</td>
+<td align="left">object</td>
+<td align="left">【必须】生涯相关配置</td>
+</tr>
+<tr>
+<td align="left">careers.tips</td>
+<td align="left">string</td>
+<td align="left">【必须】生涯提示性文字</td>
+</tr>
+<tr>
+<td align="left">careers.title</td>
+<td align="left">string</td>
+<td align="left">【必须】生涯标题</td>
+</tr>
+<tr>
+<td align="left">careers.list</td>
+<td align="left">list</td>
+<td align="left">【可选】生涯 item</td>
+</tr>
+<tr>
+<td align="left">careers.list.desc</td>
+<td align="left">string</td>
+<td align="left">【可选】生涯 item 描述</td>
+</tr>
+<tr>
+<td align="left">careers.list.color</td>
+<td align="left">string</td>
+<td align="left">【可选】生涯 item 圆圈颜色</td>
+</tr>
+<tr>
+<td align="left">careers.img</td>
+<td align="left">string</td>
+<td align="left">【必须】生涯底部图片</td>
+</tr>
+<tr>
+<td align="left">statistic</td>
+<td align="left">object</td>
+<td align="left">【必须】统计数据相关配置</td>
+</tr>
+<tr>
+<td align="left">statistic.link</td>
+<td align="left">url</td>
+<td align="left">【必须】统计数据按钮前往链接</td>
+</tr>
+<tr>
+<td align="left">statistic.text</td>
+<td align="left">string</td>
+<td align="left">【必须】统计数据按钮文字</td>
+</tr>
+<tr>
+<td align="left">map</td>
+<td align="left">object</td>
+<td align="left">【必须】地图相关配置</td>
+</tr>
+<tr>
+<td align="left">map.title</td>
+<td align="left">string</td>
+<td align="left">【必须】地图标题</td>
+</tr>
+<tr>
+<td align="left">map.StrengthenTitle</td>
+<td align="left">string</td>
+<td align="left">【必须】地图大标题</td>
+</tr>
+<tr>
+<td align="left">map.background</td>
+<td align="left">url</td>
+<td align="left">【必须】地图亮色模式背景</td>
+</tr>
+<tr>
+<td align="left">map.backgroundDark</td>
+<td align="left">url</td>
+<td align="left">【必须】地图暗色模式背景</td>
+</tr>
+<tr>
+<td align="left">selfInfo</td>
+<td align="left">object</td>
+<td align="left">【必须】作者相关信息配置</td>
+</tr>
+<tr>
+<td align="left">selfInfo.selfInfoTips1</td>
+<td align="left">string</td>
+<td align="left">【必须】作者相关提示文字 1</td>
+</tr>
+<tr>
+<td align="left">selfInfo.selfInfoContentYear</td>
+<td align="left">number</td>
+<td align="left">【必须】作者生日年份</td>
+</tr>
+<tr>
+<td align="left">selfInfo.selfInfoTips2</td>
+<td align="left">string</td>
+<td align="left">【必须】作者相关提示文字 2</td>
+</tr>
+<tr>
+<td align="left">selfInfo.selfInfoContent2</td>
+<td align="left">string</td>
+<td align="left">【必须】作者相关内容 2</td>
+</tr>
+<tr>
+<td align="left">selfInfo.selfInfoTips3</td>
+<td align="left">string</td>
+<td align="left">【必须】作者相关提示文字 3</td>
+</tr>
+<tr>
+<td align="left">selfInfo.selfInfoContent3</td>
+<td align="left">string</td>
+<td align="left">【必须】作者相关内容 3</td>
+</tr>
+<tr>
+<td align="left">personalities</td>
+<td align="left">object</td>
+<td align="left">【必须】作者性格相关配置</td>
+</tr>
+<tr>
+<td align="left">personalities.author_name</td>
+<td align="left">string</td>
+<td align="left">【必须】作者性格名称</td>
+</tr>
+<tr>
+<td align="left">personalities.personality_type</td>
+<td align="left">string</td>
+<td align="left">【必须】作者性格类型</td>
+</tr>
+<tr>
+<td align="left">personalities.photo_url</td>
+<td align="left">url</td>
+<td align="left">【必须】作者自拍图片</td>
+</tr>
+<tr>
+<td align="left">personalities.personality_img</td>
+<td align="left">url</td>
+<td align="left">【必须】作者性格表述图片</td>
+</tr>
+<tr>
+<td align="left">personalities.name_url</td>
+<td align="left">url</td>
+<td align="left">【必须】点击性格跳转到链接</td>
+</tr>
+<tr>
+<td align="left">maxim</td>
+<td align="left">object</td>
+<td align="left">【必须】座右铭相关配置</td>
+</tr>
+<tr>
+<td align="left">maxim.maxim_tips</td>
+<td align="left">string</td>
+<td align="left">【必须】座右铭相关提示文字</td>
+</tr>
+<tr>
+<td align="left">maxim.maxim_top</td>
+<td align="left">string</td>
+<td align="left">【必须】座右铭相关顶部文字</td>
+</tr>
+<tr>
+<td align="left">maxim.maxim_bottom</td>
+<td align="left">string</td>
+<td align="left">【必须】座右铭相关底部文字</td>
+</tr>
+<tr>
+<td align="left">buff</td>
+<td align="left">object</td>
+<td align="left">【必须】特长相关配置</td>
+</tr>
+<tr>
+<td align="left">buff.buff_tips</td>
+<td align="left">string</td>
+<td align="left">【必须】特长相关提示文字</td>
+</tr>
+<tr>
+<td align="left">buff.buff_top</td>
+<td align="left">string</td>
+<td align="left">【必须】特长相关顶部文字</td>
+</tr>
+<tr>
+<td align="left">buff.buff_bottom</td>
+<td align="left">string</td>
+<td align="left">【必须】特长相关底部文字</td>
+</tr>
+<tr>
+<td align="left">game</td>
+<td align="left">object</td>
+<td align="left">【必须】爱好游戏相关配置</td>
+</tr>
+<tr>
+<td align="left">game.game_tips</td>
+<td align="left">string</td>
+<td align="left">【必须】爱好游戏提示文字</td>
+</tr>
+<tr>
+<td align="left">game.game_title</td>
+<td align="left">string</td>
+<td align="left">【必须】爱好游戏标题</td>
+</tr>
+<tr>
+<td align="left">game.game_uid</td>
+<td align="left">string</td>
+<td align="left">【必须】爱好游戏 uid</td>
+</tr>
+<tr>
+<td align="left">game.game_bg</td>
+<td align="left">url</td>
+<td align="left">【必须】爱好游戏背景</td>
+</tr>
+<tr>
+<td align="left">comic</td>
+<td align="left">object</td>
+<td align="left">【必须】追番相关配置，需要 5 条数据</td>
+</tr>
+<tr>
+<td align="left">comic.comic_tips</td>
+<td align="left">string</td>
+<td align="left">【必须】追番相关提示文字</td>
+</tr>
+<tr>
+<td align="left">comic.comic_title</td>
+<td align="left">string</td>
+<td align="left">【必须】追番相关标题</td>
+</tr>
+<tr>
+<td align="left">comic.comic_list</td>
+<td align="left">list</td>
+<td align="left">【必须】追番相关列表</td>
+</tr>
+<tr>
+<td align="left">comic.comic_list.name</td>
+<td align="left">string</td>
+<td align="left">【必须】追番 item 名称</td>
+</tr>
+<tr>
+<td align="left">comic.comic_list.href</td>
+<td align="left">url</td>
+<td align="left">【必须】追番 item 链接</td>
+</tr>
+<tr>
+<td align="left">comic.comic_list.cover</td>
+<td align="left">url</td>
+<td align="left">【必须】追番 item 的 cover</td>
+</tr>
+<tr>
+<td align="left">like</td>
+<td align="left">object</td>
+<td align="left">【必须】关注偏好相关配置</td>
+</tr>
+<tr>
+<td align="left">like.like_tips</td>
+<td align="left">string</td>
+<td align="left">【必须】关注偏好配置提示文字</td>
+</tr>
+<tr>
+<td align="left">like.like_title</td>
+<td align="left">string</td>
+<td align="left">【必须】关注偏好配置标题</td>
+</tr>
+<tr>
+<td align="left">like.like_bg</td>
+<td align="left">url</td>
+<td align="left">【必须】关注偏好配置背景</td>
+</tr>
+<tr>
+<td align="left">like.like_bottom</td>
+<td align="left">string</td>
+<td align="left">【必须】关注偏好配置底部文字</td>
+</tr>
+<tr>
+<td align="left">music</td>
+<td align="left">object</td>
+<td align="left">【必须】音乐偏好相关配置</td>
+</tr>
+<tr>
+<td align="left">music.music_tips</td>
+<td align="left">string</td>
+<td align="left">【必须】音乐偏好提示性文字</td>
+</tr>
+<tr>
+<td align="left">music.music_title</td>
+<td align="left">string</td>
+<td align="left">【必须】音乐偏好标题</td>
+</tr>
+<tr>
+<td align="left">music.music_bg</td>
+<td align="left">url</td>
+<td align="left">【必须】音乐偏好背景</td>
+</tr>
+<tr>
+<td align="left">music.music_link</td>
+<td align="left">url</td>
+<td align="left">【必须】音乐偏好按钮链接</td>
+</tr>
+<tr>
+<td align="left">reward_list</td>
+<td align="left">object</td>
+<td align="left">【可选】打赏相关配置，如果不配置将没有打赏模块</td>
+</tr>
+<tr>
+<td align="left">reward_list.name</td>
+<td align="left">string</td>
+<td align="left">【必须】打赏 item 名称</td>
+</tr>
+<tr>
+<td align="left">reward_list.amount</td>
+<td align="left">number</td>
+<td align="left">【必须】打赏 item 金额</td>
+</tr>
+<tr>
+<td align="left">reward_list.datatime</td>
+<td align="left">Date</td>
+<td align="left">【必须】打赏 item 时间</td>
+</tr>
+<tr>
+<td align="left">reward_list.suffix</td>
+<td align="left">string&#x2F;元</td>
+<td align="left">【可选】打赏 item 后缀（默认元）</td>
+</tr>
+</tbody></table>
+<h2 id="首页即刻说说页面配置（推荐）"><a href="#首页即刻说说页面配置（推荐）" class="headerlink" title="首页即刻说说页面配置（推荐）"></a>首页即刻说说页面配置（推荐）</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new page essay</span><br></pre></td></tr></table></figure>
+
+<p>修改文件 <code>source/essay/index.md</code> 添加 <code>type: &quot;essay&quot;</code></p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">即刻短文</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2020-07-22 22:06:17</span></span><br><span class="line"><span class="attr">comments:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">aside:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">top_img:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">essay</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+
+<p>新建 <code>source/_data/essay.yml</code>，输入以下内容，具体字段不做解释，可以依葫芦画瓢。</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="attr">title:</span> <span class="string">即刻短文</span></span><br><span class="line">  <span class="attr">subTitle:</span> <span class="string">咸鱼的日常生活。</span></span><br><span class="line">  <span class="attr">tips:</span> <span class="string">随时随地，分享生活</span></span><br><span class="line">  <span class="attr">buttonText:</span> <span class="string">关于我</span></span><br><span class="line">  <span class="attr">buttonLink:</span> <span class="string">/about/</span></span><br><span class="line">  <span class="attr">limit:</span> <span class="number">30</span></span><br><span class="line">  <span class="attr">home_essay:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">top_background:</span> <span class="string">https://img02.anheyu.com/adminuploads/1/2022/08/21/630249e2df20f.jpg</span></span><br><span class="line">  <span class="attr">essay_list:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">content:</span> <span class="string">安知鱼主题指南</span></span><br><span class="line">      <span class="attr">date:</span> <span class="number">2023</span><span class="string">/09/09</span></span><br><span class="line">      <span class="attr">video:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">https://player.bilibili.com/player.html?aid=226886152&amp;bvid=BV1Ch41137tR&amp;cid=1081639816&amp;p=1&amp;autoplay=0</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">content:</span> <span class="string">支持了Accesskey快捷键，可以直接按下shift</span> <span class="string">+</span> <span class="string">?组合键以查看快捷键选项。</span></span><br><span class="line">      <span class="attr">date:</span> <span class="number">2023</span><span class="string">/07/01</span></span><br><span class="line">      <span class="attr">video:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">https://cdn.jsdelivr.net/npm/anzhiyu-blog-static@1.0.0/video/%E9%A3%8E%E8%BD%A6%E6%A0%B7%E5%BC%8F%E6%95%88%E6%9E%9C%E9%A2%84%E8%A7%88.mp4</span></span><br><span class="line">      <span class="attr">image:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">https://img02.anheyu.com/adminuploads/1/2023/07/01/64a033cb2c21e.webp!blogimg</span></span><br><span class="line">      <span class="attr">address:</span> <span class="string">长沙</span></span><br><span class="line">      <span class="attr">from:</span> <span class="string">安知鱼</span></span><br><span class="line">      <span class="attr">link:</span> <span class="string">/posts/e140.html</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">content:</span> <span class="string">音乐支持了参数设置自定义歌单</span></span><br><span class="line">      <span class="attr">date:</span> <span class="number">2023</span><span class="string">/01/02</span></span><br><span class="line">      <span class="attr">link:</span> <span class="string">https://blog.anheyu.com/music/?id=7269231710&amp;server=tencent</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">content:</span> <span class="string">关于页的打赏仿了b站的充电功能，使用svg绘图➕一些动画参数移动，应该不会被b站警告吧😜，另外文章也支持了顶部随机b站同款春秋冬banner。</span></span><br><span class="line">      <span class="attr">date:</span> <span class="number">2022</span><span class="string">/12/18</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">content:</span> <span class="string">React中不能直接修改state的一个重要原因是在性能优化时的prueComponment会进行浅层比较会认为是用一个对象且不能进入队列中批量更新</span></span><br><span class="line">      <span class="attr">date:</span> <span class="number">2022</span><span class="string">/12/10</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">content:</span> <span class="string">好耶，马上就可以放假回家了！好想家里的好吃的😋！才不是想捏妹妹的脸了</span></span><br><span class="line">      <span class="attr">date:</span> <span class="number">2022</span><span class="string">/12/06</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">content:</span> <span class="string">全局音乐的动画也处理好了,</span> <span class="string">nice!</span></span><br><span class="line">      <span class="attr">date:</span> <span class="number">2022</span><span class="string">/11/13</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">content:</span> <span class="string">把页脚,</span> <span class="string">首页顶部全都魔改到本地了,</span> <span class="string">方便后续魔改,</span> <span class="string">音乐也改成胶囊的样式了,</span> <span class="string">其实还是想让胶囊可拖拽,</span> <span class="string">不可点击改变歌词位置的,</span> <span class="string">但是弄了半天都没弄好就放弃了</span></span><br><span class="line">      <span class="attr">date:</span> <span class="number">2022</span><span class="string">/11/13</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">content:</span> <span class="string">朋友圈船新版本终于写完了,</span> <span class="string">耶✌️</span></span><br><span class="line">      <span class="attr">date:</span> <span class="number">2022</span><span class="string">/11/05</span></span><br><span class="line">      <span class="attr">link:</span> <span class="string">https://blog.anheyu.com/album/</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">content:</span> <span class="string">终于把相册集搞定了,</span> <span class="string">耶✌️,</span> <span class="string">瀑布流在滑动滚动条一个视口范围上下100的情况执行一次,</span> <span class="string">到底部停止监听让性能高了好多，再也不会布局混乱🤪了</span></span><br><span class="line">      <span class="attr">date:</span> <span class="number">2022</span><span class="string">/10/25</span></span><br><span class="line">      <span class="attr">link:</span> <span class="string">https://blog.anheyu.com/album/</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">content:</span> <span class="string">搜索🔍支持缩略图显示啦（默认获取文章内容的第一张图片）</span></span><br><span class="line">      <span class="attr">date:</span> <span class="number">2022</span><span class="string">/10/23</span> <span class="number">08</span><span class="string">:00:00</span></span><br><span class="line">      <span class="attr">from:</span> <span class="string">安知鱼</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">content:</span> <span class="string">遇见彩虹🌈吃定彩虹</span></span><br><span class="line">      <span class="attr">date:</span> <span class="number">2022</span><span class="string">/10/23</span> <span class="number">10</span><span class="string">:00:00</span></span><br><span class="line">      <span class="attr">image:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">https://bu.dusays.com/2023/04/09/64329399e285d.webp</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">https://bu.dusays.com/2023/04/09/64329399aa3bc.webp</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">https://bu.dusays.com/2023/04/09/6432939996dd7.webp</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">content:</span> <span class="string">ThreeJs</span> <span class="string">API真多丫</span></span><br><span class="line">      <span class="attr">date:</span> <span class="number">2022</span><span class="string">/10/19</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">content:</span> <span class="string">妹妹强制要求我买走了她的两幅画</span> <span class="string">-¥30</span></span><br><span class="line">      <span class="attr">date:</span> <span class="number">2022</span><span class="string">/10/02</span></span><br><span class="line">      <span class="attr">image:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">https://bu.dusays.com/2023/04/09/643293997b92b.jpeg</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">content:</span> <span class="string">歌曲推荐</span></span><br><span class="line">      <span class="attr">date:</span> <span class="number">2022</span><span class="string">/09/25</span></span><br><span class="line">      <span class="attr">aplayer:</span></span><br><span class="line">        <span class="attr">server:</span> <span class="string">tencent</span></span><br><span class="line">        <span class="attr">id:</span> <span class="string">001FGQba3i10mw</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">content:</span> <span class="string">做了一个噩梦,</span> <span class="string">梦到从楼顶坠下去了。😷</span></span><br><span class="line">      <span class="attr">date:</span> <span class="number">2022</span><span class="string">/09/24</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">content:</span> <span class="string">JOJO是真的好看！</span></span><br><span class="line">      <span class="attr">date:</span> <span class="number">2022</span><span class="string">/09/21</span></span><br><span class="line">      <span class="attr">link:</span> <span class="string">https://www.bilibili.com/bangumi/play/ss39431?spm_id_from=333.337.0.0</span></span><br></pre></td></tr></table></figure>
+
+<p>【主题版本1.6.7以上支持】其中 <code>video</code> 对于 <code>bilibili</code> 进行的额外的支持，视频为 <code>player.bilibili.com</code> 的将显示为 <code>bilibili</code> 视频，并且可以在链接后面拼接 <code>&amp;autoplay=0</code>控制不自动播放</p>
+<p>主题配置文件中开启<code>menu</code>中关于和闲言碎语的注释，导航栏闲言碎语，注意缩进！！！</p>
+<h2 id="我的装备页面配置（推荐）"><a href="#我的装备页面配置（推荐）" class="headerlink" title="我的装备页面配置（推荐）"></a>我的装备页面配置（推荐）</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new page equipment</span><br></pre></td></tr></table></figure>
+
+<p>修改文件 <code>source/equipment/index.md</code> 添加 <code>type: &quot;equipment&quot;</code></p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">我的装备</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2023-06-10 21:33:24</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">equipment</span></span><br><span class="line"><span class="attr">aside:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">top_img:</span> <span class="literal">false</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+
+<p>新建文件 <code>source\_data\equipment.yml</code>，没有 <code>_data</code> 文件夹的话也请自己新建。以下是默认格式示例</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="attr">class_name:</span> <span class="string">好物</span></span><br><span class="line">  <span class="attr">description:</span> <span class="string">实物装备推荐</span></span><br><span class="line">  <span class="attr">tip:</span> <span class="string">跟</span> <span class="string">安知鱼</span> <span class="string">一起享受科技带来的乐趣</span></span><br><span class="line">  <span class="attr">top_background:</span> <span class="string">https://bu.dusays.com/2023/07/05/64a4c38842b7a.webp</span></span><br><span class="line">  <span class="attr">good_things:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">title:</span> <span class="string">生产力</span></span><br><span class="line">      <span class="attr">description:</span> <span class="string">提升自己生产效率的硬件设备</span></span><br><span class="line">      <span class="attr">equipment_list:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">MacBook</span> <span class="string">Pro</span> <span class="number">2021 </span><span class="number">16</span> <span class="string">英寸</span></span><br><span class="line">          <span class="attr">specification:</span> <span class="string">M1</span> <span class="string">Max</span> <span class="string">64G</span> <span class="string">/</span> <span class="string">1TB</span></span><br><span class="line">          <span class="attr">description:</span> <span class="string">屏幕显示效果好、色彩准确、对比度强、性能强劲、续航优秀。可以用来开发和设计。</span></span><br><span class="line">          <span class="attr">image:</span> <span class="string">https://bu.dusays.com/2023/07/05/64a4c3b191e2e.png</span></span><br><span class="line">          <span class="attr">link:</span> <span class="string">/posts/571d.html</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">iPad</span> <span class="number">2020</span></span><br><span class="line">          <span class="attr">specification:</span> <span class="string">深空灰</span> <span class="string">/</span> <span class="string">128G</span></span><br><span class="line">          <span class="attr">description:</span> <span class="string">事事玩得转，买前生产力，买后爱奇艺。</span></span><br><span class="line">          <span class="attr">image:</span> <span class="string">https://bu.dusays.com/2023/07/05/64a4c3b191e2e.png</span></span><br><span class="line">          <span class="attr">link:</span> <span class="string">https://www.apple.com.cn/ipad-10.2/</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">iPhone</span> <span class="number">12</span> <span class="string">mini</span></span><br><span class="line">          <span class="attr">specification:</span> <span class="string">绿色</span> <span class="string">/</span> <span class="string">128G</span></span><br><span class="line">          <span class="attr">description:</span> <span class="string">超瓷晶面板，玻璃背板搭配铝金属边框，曲线优美的圆角设计，mini大小正好一只手就抓住，深得我心，唯一缺点大概就是续航不够。</span></span><br><span class="line">          <span class="attr">image:</span> <span class="string">https://bu.dusays.com/2023/07/05/64a4c3ded6319.webp</span></span><br><span class="line">          <span class="attr">link:</span> <span class="string">https://www.apple.com.cn/iphone-12/specs/</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">AirPods（第三代）</span></span><br><span class="line">          <span class="attr">specification:</span> <span class="string">标准版</span></span><br><span class="line">          <span class="attr">description:</span> <span class="string">第三代对比第二代提升很大，和我一样不喜欢入耳式耳机的可以入，空间音频等功能确实新颖，第一次使用有被惊艳到。</span></span><br><span class="line">          <span class="attr">image:</span> <span class="string">https://bu.dusays.com/2023/07/05/64a4c3ded6319.webp</span></span><br><span class="line">          <span class="attr">link:</span> <span class="string">https://www.apple.com.cn/airpods-3rd-generation/</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">title:</span> <span class="string">出行</span></span><br><span class="line">      <span class="attr">description:</span> <span class="string">用来出行的实物及设备</span></span><br><span class="line">      <span class="attr">equipment_list:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Apple</span> <span class="string">Watch</span> <span class="string">Series</span> <span class="number">8</span></span><br><span class="line">          <span class="attr">specification:</span> <span class="string">黑色</span></span><br><span class="line">          <span class="attr">description:</span> <span class="string">始终为我的健康放哨，深夜弹出站立提醒，不过确实有效的提高了我的运动频率，配合apple全家桶还是非常棒的产品，缺点依然是续航。</span></span><br><span class="line">          <span class="attr">image:</span> <span class="string">https://bu.dusays.com/2023/07/05/64a4c40ab698a.webp</span></span><br><span class="line">          <span class="attr">link:</span> <span class="string">https://www.apple.com.cn/apple-watch-series-8/</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">NATIONAL</span> <span class="string">GEOGRAPHIC双肩包</span></span><br><span class="line">          <span class="attr">specification:</span> <span class="string">黑色</span></span><br><span class="line">          <span class="attr">description:</span> <span class="string">国家地理黑色大包，正好装下16寸</span> <span class="string">Macbook</span> <span class="string">Pro，并且背起来很舒适，底部自带防雨罩也好用，各种奇怪的小口袋深得我心。</span></span><br><span class="line">          <span class="attr">image:</span> <span class="string">https://bu.dusays.com/2023/07/05/64a4c40ab698a.webp</span></span><br><span class="line">          <span class="attr">link:</span> <span class="string">https://item.jd.com/100011269828.html</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">NATIONAL</span> <span class="string">GEOGRAPHIC学生书包🎒</span></span><br><span class="line">          <span class="attr">specification:</span> <span class="string">红白色</span></span><br><span class="line">          <span class="attr">description:</span> <span class="string">国家地理黑色大包，冰冰🧊同款，颜值在线且实用。</span></span><br><span class="line">          <span class="attr">image:</span> <span class="string">https://bu.dusays.com/2023/07/05/64a4c40ab698a.webp</span></span><br><span class="line">          <span class="attr">link:</span> <span class="string">https://item.jd.com/100005889786.html</span></span><br></pre></td></tr></table></figure>
+
+<p>主题配置文件中开启 <code>menu</code> 中关于和我的装备的注释，导航栏我的装备，注意缩进！！！</p>
+<h2 id="404页面配置"><a href="#404页面配置" class="headerlink" title="404页面配置"></a>404页面配置</h2><p>主题内置了一个简单的 404 页面，可在设置中开启 本地预览时，访问出错的网站是不会跳到 404 页面的。</p>
+<p>如需本地预览，请访问 <code>http://localhost:4000/404.html</code></p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># A simple 404 page</span></span><br><span class="line"><span class="attr">error_404:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">subtitle:</span> <span class="string">&quot;页面没有找到&quot;</span></span><br><span class="line">  <span class="attr">background:</span></span><br></pre></td></tr></table></figure>
+
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" title="头像" alt="头像"></a><div class="post-copyright__author_name">Ethan</div><div class="post-copyright__author_desc">Stay Hungry, Stay Foolish!</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="https://caoyixiong.com/post/75a1266d.html">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('https://caoyixiong.com/post/75a1266d.html')">Hexo 页面配置</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="/img/qrcode-wechat.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/qrcode-wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/qrcode-alipay.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/qrcode-alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="https://caoyixiong.com/post/75a1266d.html"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=Hexo 页面配置&amp;url=https://caoyixiong.com/post/75a1266d.html&amp;pic=" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://caoyixiong.com" target="_blank">伊森笔记</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/Hexo/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>Hexo<span class="tagsPageCount">3</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/post/4d929e28.html"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Hexo 主题安装</div></div></a></div><div class="next-post pull-right"><a href="/post/1b0927de.html"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Hexo 安装</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="anzhiyufont anzhiyu-icon-thumbs-up fa-fw" style="font-size: 1.5rem; margin-right: 4px"></i><span>喜欢这篇文章的人也看了</span></div><div class="relatedPosts-list"><div><a href="/post/4d929e28.html" title="Hexo 主题安装"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-09-05</div><div class="title">Hexo 主题安装</div></div></a></div><div><a href="/post/1b0927de.html" title="Hexo 安装"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-09-05</div><div class="title">Hexo 安装</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="anzhiyufont anzhiyu-icon-comments"></i><span> 评论</span></div><div class="comment-randomInfo"><a onclick="anzhiyu.addRandomCommentInfo()" href="javascript:void(0)">匿名评论</a><a href="/privacy" style="margin-left: 4px">隐私政策</a></div><div class="comment-tips" id="comment-tips"><span>✅ 你无需删除空行，直接评论以获取最佳展示效果</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div><div class="comment-barrage"></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info__sayhi" id="author-info__sayhi" onclick="anzhiyu.changeSayHelloText()"></div><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-status"><img class="g-status" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/08/24/64e6ce9c507bb.png" alt="status"/></div></div><div class="author-info__description"><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">这有关于<b style="color:#fff">产品、设计、开发</b>相关的问题和看法，还有<b style="color:#fff">文章翻译</b>和<b style="color:#fff">分享</b>。</div><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">相信你可以在这里找到对你有用的<b style="color:#fff">知识</b>和<b style="color:#fff">教程</b>。</div></div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/"><h1 class="author-info__name">Ethan</h1><div class="author-info__desc">Stay Hungry, Stay Foolish!</div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://github.com/caoyixiong" target="_blank" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a></div></div></div></div><div class="card-widget anzhiyu-right-widget" id="card-wechat" onclick="null"><div id="flip-wrapper"><div id="flip-content"><div class="face" style="background: url(https://bu.dusays.com/2023/01/13/63c02edf44033.png) center center / 100% no-repeat"></div><div class="back face" style="background: url(https://bu.dusays.com/2023/05/13/645fa415e8694.png) center center / 100% no-repeat"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Front-matter-%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AE%A4%E8%AF%86"><span class="toc-number">1.</span> <span class="toc-text">Front-matter 的基本认识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Page-Front-matter"><span class="toc-number">1.1.</span> <span class="toc-text">Page Front-matter</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Post-Front-matter"><span class="toc-number">1.2.</span> <span class="toc-text">Post Front-matter</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E7%B1%BB%E9%A1%B5%E9%85%8D%E7%BD%AE%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89"><span class="toc-number">2.</span> <span class="toc-text">分类页配置（推荐）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%87%E7%AD%BE%E9%A1%B5%E9%85%8D%E7%BD%AE%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89"><span class="toc-number">3.</span> <span class="toc-text">标签页配置（推荐）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5%E9%85%8D%E7%BD%AE%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89"><span class="toc-number">4.</span> <span class="toc-text">友情链接配置（推荐）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8E%E6%95%B0%E7%99%BE%E5%8D%9A%E4%B8%BB%E5%85%B1%E5%90%8C%E8%BF%9B%E6%AD%A5%EF%BC%88%E6%A0%B7%E5%BC%8F%E5%AD%98%E5%9C%A8%E5%BC%82%E5%B8%B8%EF%BC%89"><span class="toc-number">5.</span> <span class="toc-text">与数百博主共同进步（样式存在异常）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%8B%E5%8F%8B%E5%9C%88%E9%A1%B5%E9%9D%A2%E9%85%8D%E7%BD%AE%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89"><span class="toc-number">6.</span> <span class="toc-text">朋友圈页面配置（推荐）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%95%99%E8%A8%80%E6%9D%BF%E9%A1%B5%E9%9D%A2%E9%85%8D%E7%BD%AE%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89"><span class="toc-number">7.</span> <span class="toc-text">留言板页面配置（推荐）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9F%B3%E4%B9%90%E9%A6%86%E9%A1%B5%E9%85%8D%E7%BD%AE%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89"><span class="toc-number">8.</span> <span class="toc-text">音乐馆页配置（推荐）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%BD%E7%95%AA%E9%A1%B5%E9%9D%A2%E9%85%8D%E7%BD%AE%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89"><span class="toc-number">9.</span> <span class="toc-text">追番页面配置（推荐）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%B8%E5%86%8C%E9%A1%B5%E9%9D%A2%E9%85%8D%E7%BD%AE%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89"><span class="toc-number">10.</span> <span class="toc-text">相册页面配置（推荐）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E9%A1%B5%E9%9D%A2%E9%85%8D%E7%BD%AE%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89"><span class="toc-number">11.</span> <span class="toc-text">关于页面配置（推荐）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A6%96%E9%A1%B5%E5%8D%B3%E5%88%BB%E8%AF%B4%E8%AF%B4%E9%A1%B5%E9%9D%A2%E9%85%8D%E7%BD%AE%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89"><span class="toc-number">12.</span> <span class="toc-text">首页即刻说说页面配置（推荐）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%91%E7%9A%84%E8%A3%85%E5%A4%87%E9%A1%B5%E9%9D%A2%E9%85%8D%E7%BD%AE%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89"><span class="toc-number">13.</span> <span class="toc-text">我的装备页面配置（推荐）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#404%E9%A1%B5%E9%9D%A2%E9%85%8D%E7%BD%AE"><span class="toc-number">14.</span> <span class="toc-text">404页面配置</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/1b0927de.html" title="Hexo 安装">Hexo 安装</a><time datetime="2024-09-04T19:06:45.339Z" title="发表于 2024-09-05 03:06:45">2024-09-05</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/75a1266d.html" title="Hexo 页面配置">Hexo 页面配置</a><time datetime="2024-09-04T19:06:45.339Z" title="发表于 2024-09-05 03:06:45">2024-09-05</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/4d929e28.html" title="Hexo 主题安装">Hexo 主题安装</a><time datetime="2024-09-04T17:35:46.403Z" title="发表于 2024-09-05 01:35:46">2024-09-05</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/5fddf106.html" title="Git 常用命令">Git 常用命令</a><time datetime="2024-09-03T18:10:26.147Z" title="发表于 2024-09-04 02:10:26">2024-09-04</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/da722da.html" title="npm cnpm yarn pnpm 命令区别详解">npm cnpm yarn pnpm 命令区别详解</a><time datetime="2024-09-02T10:04:21.493Z" title="发表于 2024-09-02 18:04:21">2024-09-02</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div id="footer_deal"><a class="deal_link" href="mailto:409677557@qq.com" title="Email"><i class="anzhiyufont anzhiyu-icon-envelope"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://weibo.com/ethan20" title="微博"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a><img class="footer_mini_logo" title="返回顶部" alt="返回顶部" onclick="anzhiyu.scrollToDest(0, 500)" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" size="50px"/><a class="deal_link" target="_blank" rel="noopener" href="https://github.com/caoyixiong" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://v.douyin.com/ih79dN7S/" title="抖音"><i class="anzhiyufont anzhiyu-icon-tiktok"></i></a></div><div id="anzhiyu-footer"><div class="footer-group"><div class="footer-title">导航</div><div class="footer-links"><a class="footer-item" title="即刻短文" href="/essay/">即刻短文</a><a class="footer-item" title="友链文章" href="/fcircle/">友链文章</a><a class="footer-item" title="留言板" href="/comments/">留言板</a></div></div><div class="footer-group"><div class="footer-title">协议</div><div class="footer-links"><a class="footer-item" title="隐私协议" href="/privacy/">隐私协议</a><a class="footer-item" title="Cookies" href="/cookies/">Cookies</a><a class="footer-item" title="版权协议" href="/copyright/">版权协议</a></div></div><div class="footer-group"><div class="footer-title-group"><div class="footer-title">友链</div><a class="random-friends-btn" id="footer-random-friends-btn" href="javascript:addFriendLinksInFooter();" title="换一批友情链接"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right"></i></a></div><div class="footer-links" id="friend-links-in-footer"></div></div></div></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2020 - 2024 By <a class="footer-bar-link" href="/" title="Ethan" target="_blank">Ethan</a></div></div><div id="footer-type-tips"></div><div class="js-pjax"><script>function subtitleType () {
+  getScript('https://sdk.jinrishici.com/v2/browser/jinrishici.js').then(() => {
+    jinrishici.load(result =>{
+      if (true) {
+        const sub = ["生活明朗&#44; 万物可爱&#44; 人间值得&#44; 未来可期。"]
+        const content = result.data.content
+        sub.unshift(content)
+        window.typed = new Typed('#footer-type-tips', {
+          strings: sub,
+          startDelay: 300,
+          typeSpeed: 150,
+          loop: true,
+          backSpeed: 50,
+        })
+      } else {
+        document.getElementById('footer-type-tips').innerHTML = result.data.content
+      }
+    })
+  })
+}
+
+if (true) {
+  if (typeof Typed === 'function') {
+    subtitleType()
+  } else {
+    getScript('https://cdn.cbd.int/typed.js@2.1.0/dist/typed.umd.js').then(subtitleType)
+  }
+} else {
+  subtitleType()
+}
+</script></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">25</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">22</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">4</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://aibag.xyz/" title="导航"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://aibag.xyz/favicon.ico" alt="导航"/><span class="back-menu-item-text">导航</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.anheyu.com/" title="安知鱼图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.anheyu.com/favicon.ico" alt="安知鱼图床"/><span class="back-menu-item-text">安知鱼图床</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/fcircle/"><i class="anzhiyufont anzhiyu-icon-artstation faa-tada" style="font-size: 0.9em;"></i><span> 朋友圈</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/bangumis/"><i class="anzhiyufont anzhiyu-icon-bilibili faa-tada" style="font-size: 0.9em;"></i><span> 追番页</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/equipment/"><i class="anzhiyufont anzhiyu-icon-fire faa-tada" style="font-size: 0.9em;"></i><span> 我的装备</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/AWK/" style="font-size: 0.88rem;">AWK<sup>1</sup></a><a href="/tags/Crontab/" style="font-size: 0.88rem;">Crontab<sup>1</sup></a><a href="/tags/Element/" style="font-size: 0.88rem;">Element<sup>1</sup></a><a href="/tags/Gin/" style="font-size: 0.88rem;">Gin<sup>1</sup></a><a href="/tags/Git/" style="font-size: 0.88rem;">Git<sup>1</sup></a><a href="/tags/Go/" style="font-size: 0.88rem;">Go<sup>6</sup></a><a href="/tags/Hexo/" style="font-size: 0.88rem;">Hexo<sup>3</sup></a><a href="/tags/LAMP/" style="font-size: 0.88rem;">LAMP<sup>1</sup></a><a href="/tags/LNMP/" style="font-size: 0.88rem;">LNMP<sup>1</sup></a><a href="/tags/Laravel/" style="font-size: 0.88rem;">Laravel<sup>1</sup></a><a href="/tags/Linux/" style="font-size: 0.88rem;">Linux<sup>2</sup></a><a href="/tags/MYSQL/" style="font-size: 0.88rem;">MYSQL<sup>1</sup></a><a href="/tags/Mac/" style="font-size: 0.88rem;">Mac<sup>1</sup></a><a href="/tags/Node/" style="font-size: 0.88rem;">Node<sup>5</sup></a><a href="/tags/Nvm/" style="font-size: 0.88rem;">Nvm<sup>1</sup></a><a href="/tags/Ubuntu/" style="font-size: 0.88rem;">Ubuntu<sup>1</sup></a><a href="/tags/Unbuntu/" style="font-size: 0.88rem;">Unbuntu<sup>2</sup></a><a href="/tags/Vue/" style="font-size: 0.88rem;">Vue<sup>3</sup></a><a href="/tags/cnpm/" style="font-size: 0.88rem;">cnpm<sup>1</sup></a><a href="/tags/npm/" style="font-size: 0.88rem;">npm<sup>2</sup></a><a href="/tags/yarn/" style="font-size: 0.88rem;">yarn<sup>1</sup></a><a href="/tags/%E4%B8%BB%E9%A2%98/" style="font-size: 0.88rem;">主题<sup>1</sup></a></div></div><hr/></div></div><div id="keyboard-tips"><div class="keyboardTitle">博客快捷键</div><div class="keybordList"><div class="keybordItem"><div class="keyGroup"><div class="key">shift K</div></div><div class="keyContent"><div class="content">关闭快捷键功能</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift A</div></div><div class="keyContent"><div class="content">打开/关闭中控台</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift M</div></div><div class="keyContent"><div class="content">播放/暂停音乐</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift D</div></div><div class="keyContent"><div class="content">深色/浅色显示模式</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift S</div></div><div class="keyContent"><div class="content">站内搜索</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift R</div></div><div class="keyContent"><div class="content">随机访问</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift H</div></div><div class="keyContent"><div class="content">返回首页</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift F</div></div><div class="keyContent"><div class="content">友链鱼塘</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift L</div></div><div class="keyContent"><div class="content">友链页面</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift P</div></div><div class="keyContent"><div class="content">关于本站</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift I</div></div><div class="keyContent"><div class="content">原版/本站右键菜单</div></div></div></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="anzhiyufont anzhiyu-icon-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8152976493" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.7"></meting-js></div><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="anzhiyufont anzhiyu-icon-xmark"></i></button></nav><div class="search-wrap"><div id="algolia-search-input"></div><hr/><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-info"><div class="algolia-stats"></div><div class="algolia-poweredBy"></div></div></div></div></div><div id="search-mask"></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.5/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.cbd.int/pangu@4.0.7/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("04/01/2021 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2020 By 安知鱼 V1.6.12",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 Ethan 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><script src="https://cdn.cbd.int/algoliasearch@4.18.0/dist/algoliasearch-lite.umd.js"></script><script src="https://cdn.cbd.int/instantsearch.js@4.60.0/dist/instantsearch.production.min.js"></script><script src="/js/search/algolia.js"></script><div class="js-pjax"><script>(() => {
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://twikoo-8sxa.vercel.app',
+      region: 'ap-shenzhen',
+      onCommentLoaded: () => {
+        anzhiyu.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') setTimeout(runFn,0)
+    else getScript('https://cdn.cbd.int/twikoo@1.6.25/dist/twikoo.all.min.js').then(runFn)
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://twikoo-8sxa.vercel.app',
+      region: 'ap-shenzhen',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(res => {
+      countELement.textContent = res[0].count
+    }).catch(err => {
+      console.error(err)
+    })
+  }
+
+  const runFn = () => {
+    init();
+    
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) anzhiyu.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else {
+      loadTwikoo()
+    }
+  } else {
+    window.loadOtherComment = loadTwikoo
+  }
+})()</script><input type="hidden" name="page-type" id="page-type" value="post"></div><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const getComment = () => {
+    const runTwikoo = () => {
+      twikoo.getRecentComments({
+        envId: 'https://twikoo-8sxa.vercel.app',
+        region: 'ap-shenzhen',
+        pageSize: 6,
+        includeReply: true
+      }).then(function (res) {
+        const twikooArray = res.map(e => {
+          return {
+            'content': changeContent(e.comment),
+            'avatar': e.avatar,
+            'nick': e.nick,
+            'url': e.url + '#' + e.id,
+            'date': new Date(e.created).toISOString()
+          }
+        })
+
+        saveToLocal.set('twikoo-newest-comments', JSON.stringify(twikooArray), 10/(60*24))
+        generateHtml(twikooArray)
+      }).catch(function (err) {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.textContent= "无法获取评论，请确认相关配置是否正确"
+      })
+    }
+
+    if (typeof twikoo === 'object') {
+      runTwikoo()
+    } else {
+      getScript('https://cdn.cbd.int/twikoo@1.6.25/dist/twikoo.all.min.js').then(runTwikoo)
+    }
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'data-lazy-src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'><div class='name'><span>${array[i].nick} </span></div></a>`
+        }
+        
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
+        <time datetime="${array[i].date}">${anzhiyu.diffDate(array[i].date, true)}</time></div>
+        </div>`
+      }
+    } else {
+      result += '没有评论'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom && ($dom.innerHTML= result)
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('twikoo-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><script src="/js/anzhiyu/right_click_menu.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["meta[property=\"og:image\"]","meta[property=\"og:title\"]","meta[property=\"og:url\"]","meta[property=\"og:type\"]","meta[property=\"og:site_name\"]","meta[property=\"og:description\"]","head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>
